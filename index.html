@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Hotel Monteluna</title>
+	<style>
+		/* Punto 9: Ponle un color de fondo a la página, ( en el body ponle el estilo “ background-color: un color” ) */
+		body {
+			background-color: #f0f8ff; /* color de fondo de la página */
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			color: blue; /* Punto 2: Un h1 que ponga  “Hotel ……”. El color de la letra es blue */
+		}
+
+		table {
+			width: 400px;
+			border: 1px solid blue;
+			border-collapse: collapse; /* juntar bordes */
+		}
+
+		th, td {
+			border: 1px solid blue;
+			padding: 8px;
+			text-align: left;
+		}
+
+		th {
+			background-color: #dbe8ff;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Punto 2: Un h1 que ponga  “Hotel ……”. El color de la letra es blue -->
+	<h1>Hotel Monteluna</h1>
+
+	<!-- Punto 3: Una h2 que ponga un slogan, por ejemplo “El sitio de tu recreo”. -->
+	<h2>El sitio de tu recreo</h2>
+
+	<!-- Punto 4: Una imagen de 300px de ancho de tu hotel DESCARGADA en la carpeta “images” de tu sitio-->
+	<img alt="Fachada del Hotel Monteluna" src="assets/images/hotel.jpg" width="300">
+
+	<!-- Punto 5: Un párrafo que ponga una descripción de tu hotel , algo así como “El hotel rural los sotillos se
+		encuentra en Castelar de la Vega entre los ríos “Sotillos” y “Aguazul” y dispone de todas las facilidades
+		para pasar un fin de semana de descanso en plena naturaleza, bla, bla…. -->
+	<p>
+		El Hotel Monteluna se encuentra en Castelar de la Vega entre los ríos
+		Sotillos y Aguazul. Dispone de todas las facilidades para pasar un fin
+		de semana de descanso en plena naturaleza: spa, chimenea, restaurante
+		propio, rutas guiadas por la sierra y mucho más.
+	</p>
+
+	<!-- Punto 6: Una lista no numerada ( ul )  que liste algunos servicios de tu hotel ( piscina, bar, … ) -->
+	<ul>
+		<li>Piscina climatizada</li>
+		<li>Bar & terraza lounge</li>
+		<li>Spa y masajes</li>
+		<li>Wifi gratuito</li>
+		<li>Aparcamiento privado</li>
+	</ul>
+
+	<!-- PUnto 7: Un párrafo que ponga “Encuentranos en “ seguido de un enlace a la página www.turismorural.com
+		que se abre en una pestaña distinta. -->
+	<p>
+		Encuéntranos en
+		<a href="https://www.turismorural.com" rel="noopener noreferrer" target="_blank">
+			turismorural.com
+		</a>
+	</p>
+
+	<!-- Punto 8: Un h3 que ponga “lista de precios” seguido de esta tabla -->
+	<h3>Lista de precios</h3>
+
+	<table>
+		<tr>
+			<th>Habitación</th>
+			<th>Temporada Baja</th>
+			<th>Temporada Alta</th>
+		</tr>
+		<tr>
+			<td>Individual</td>
+			<td>50€ / noche</td>
+			<td>70€ / noche</td>
+		</tr>
+		<tr>
+			<td>Doble</td>
+			<td>80€ / noche</td>
+			<td>110€ / noche</td>
+		</tr>
+		<tr>
+			<td>Suite Junior</td>
+			<td>120€ / noche</td>
+			<td>160€ / noche</td>
+		</tr>
+	</table>
+	<!-- Punto 8: Un enlace que ponga “Haga su reserva” y que apunte a la página reserva.html de la misma carpeta -->
+	<p>
+		<a class="reserva" href="reserva.html">Haga su reserva</a>
+	</p>
+
+</body>
+</html>
