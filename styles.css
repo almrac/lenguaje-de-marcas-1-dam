@@ -28,6 +28,9 @@ body {
 .header__container {
     width: 100%;
     max-width: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__logo {
