@@ -1,165 +1,420 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Hecco · Decoración en madera</title>
-	<link rel="stylesheet" href="styles.css" />
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>hecco - decoración en madera</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
+		body {
+			font-family: 'Arial', Sans-Serif, serif;
+			line-height: 1.6;
+			color: #333;
+		}
+
+
+		/* CABECERA / HERO */
+		#cabecera {
+			position: relative;
+			height: 500px;
+			background-image: url('assets/images/hecco-decoracion-en-madera-pura-vida.jpg');
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			color: white;
+		}
+
+		#cabecera::after {
+			/*Hola Jose Luis, se que no hemos visto los pseudoelementos aún, uso este after para hacer un velado que
+			facilitaría la lectura de texto en imágenes muy claras. Se que no hemos visto este punto aún (ni siquiera se
+			si esta previsto en el temario, pero me gusta mas que la sombra de los textos para mejorar la legilibidad*/
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+
+		#cabecera h1 {
+			font-size: 2.5em;
+			line-height: 1.2;
+			margin-bottom: 0;
+			text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+			/*Esto de los text shadow sigue sin gustarme, lo pongo pq esta en el ejercicio*/
+		}
+
+		#cabecera .subtitulo {
+			font-size: 1.5em;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+		}
+
+		/* MENÚ */
+		#menu-principal {
+			background-color: #14443a;
+			padding: 0;
+		}
+
+		#menu-principal .contenedor-menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		#menu-principal nav {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+		}
+
+		#menu-principal nav a {
+			flex: 1;
+			padding: 20px;
+			text-align: center;
+			color: white;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		#menu-principal nav a:hover {
+			background-color: #0b2c25;;
+		}
+
+		/* SECCIÓN QUIENES SOMOS */
+		#seccion-quienes-somos {
+			background-color: #f8f9fa;
+			padding: 60px 24px;
+		}
+
+		.titulo-seccion {
+			font-size: 2.5em;
+			line-height: 1.2;
+			margin-bottom: 40px;
+			text-align: center;
+			color: #14443a;
+		}
+
+		#seccion-quienes-somos .contenedor-quienes-somos {
+			display: flex;
+			flex-direction: column;
+
+
+		}
+
+		#seccion-quienes-somos .fila {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: start;
+			/*Se que esta propiedad aún no la hemos visto, pero gap, aplica una separación entre elementos hijos de un
+			elemento flex. Esta soportado por todos los navegadores excepto IE11, y da menos problemas en la maquetación
+			que poner tamaños porcentuales o absolutos y tratar las separaciones con margins o paddings.
+			Puedes comprobar el despliegue actual de la propiedad en los navegadores en esta web caniuse.com*/
+			gap: 48px;
+			width: 100%;
+		}
+
+		#seccion-quienes-somos .columna-imagen {
+			flex: 1;
+			/* Hola Jose Luís, un apunte aqui:
+			Tanto aquí podría usar la propiedad del 50% y poner lo mismo en .columna-texto, pero al ser hijo de un
+			componente flex, considero mas apropiado usar las propiedades css mas acordes a esta propiedad del padre que
+			separar los bloques por porcentaje o un tamaño absoluto*/
+		}
+
+		#seccion-quienes-somos .columna-imagen img {
+			width: 100%;
+			height: auto;
+			display: block;
+			transition: opacity 0.3s ease;
+			box-shadow: 0 11px 44px rgba(0, 0, 0, 0.2);
+			border-radius: 16px;
+		}
+
+
+		#seccion-quienes-somos .columna-texto {
+			flex: 1;
+		}
+
+		#seccion-quienes-somos .columna-texto p {
+			margin-bottom: 20px;
+		}
+
+		#seccion-quienes-somos .columna-texto h3 {
+			font-size: 1.8em;
+			margin-bottom: 20px;
+			color: #14443a;
+		}
+
+		#seccion-quienes-somos .columna-texto p {
+			font-size: 1.1em;
+			line-height: 1.8;
+			color: #555;
+		}
+
+		/* SECCIÓN OPINIONES */
+		#seccion-opiniones {
+			padding: 60px 24px;
+			background-color: white;
+		}
+
+
+		#seccion-opiniones .fila-opiniones {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: stretch;
+			flex-wrap: wrap;
+			gap: 48px;
+		}
+
+		.opinion {
+			flex: 1;
+			max-width: 100%;
+			text-align: center;
+		}
+
+		.imagen-redonda {
+			box-shadow: 0 11px 44px rgba(0, 0, 0, 0.1);
+			max-width: 320px;
+			height: auto;
+			border-radius: 50%;
+			overflow: hidden;
+			margin: 0 auto 20px;
+		}
+
+		.imagen-redonda img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+
+		.opinion p {
+			font-style: italic;
+			font-size: 1.6em;
+			color: #555;
+			line-height: 1.6;
+		}
+
+		/* FOOTER */
+		#pie-pagina {
+			background-color: #0b2c25;
+			color: white;
+			padding: 60px 24px;
+		}
+
+		#pie-pagina .contenedor-pie-pagina {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 30px;
+
+		}
+
+		#pie-pagina .columna-pie-pagina {
+			flex: 1;
+			min-width: 200px;
+			text-align: center;
+			flex-direction: column;
+		}
+
+		#pie-pagina .columna-pie-pagina h4 {
+			padding-bottom: 16px;
+			font-size: 1.2em;
+			text-transform: uppercase;
+			letter-spacing: 6px;
+			font-weight: lighter;
+		}
+
+		#pie-pagina .columna-pie-pagina a {
+			color: white;
+			text-decoration: none;
+			margin-bottom: 8px;
+			cursor: pointer;
+			transition: color 0.3s ease;
+		}
+
+
+		#pie-pagina .columna-enlaces a {
+			font-size: 2em;
+			margin: 0 8px;
+		}
+
+		#pie-pagina .columna-pie-pagina a:hover {
+			color: #2b937d;
+		}
+
+		#pie-pagina .columna-pie-pagina p {
+			line-height: 1.8;
+		}
+
+		/* RESPONSIVE */
+		@media (min-width: 768px) {
+			#cabecera h1 {
+				font-size: 4em;
+			}
+
+			#menu-principal .contenedor-menu {
+				flex-direction: row;
+			}
+
+			#seccion-opiniones .fila-opiniones {
+				flex-direction: row;
+				justify-content: center;
+			}
+
+			.opinion {
+				flex: 1;
+				min-width: 250px;
+				max-width: 50%;
+				text-align: center;
+
+			}
+
+			#pie-pagina .contenedor-pie-pagina {
+				flex-direction: row;
+			}
+
+		}
+
+		@media (min-width: 1200px) {
+			#seccion-quienes-somos .contenedor-quienes-somos {
+				max-width: 80%;
+				margin: 0 auto;
+			}
+
+			#seccion-quienes-somos .fila {
+				flex-direction: row;
+			}
+
+			.opinion {
+				flex: 1;
+				min-width: 250px;
+				max-width: 33%;
+				text-align: center;
+
+			}
+
+			#seccion-opiniones .contenedor-seccion-opiniones {
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			#pie-pagina .contenedor-pie-pagina {
+				width: 80%;
+				margin: 0 auto;
+			}
+
+		}
+	</style>
 </head>
 <body>
-
-	<header class="header">
-		<div class="header__container">
-			<a class="header__brand" href="#" aria-label="Hecco">
-				<img src="assets/images/logo-hecco.svg" alt="hecco" class="header__logo">
-			</a>
-		</div>
+	<!-- CABECERA / HERO -->
+	<header id="cabecera">
+		<h1>hecco</h1>
+		<p class="subtitulo">Tu tienda online de decoración en madera</p>
 	</header>
 
-	<nav class="nav" aria-label="Navegación principal">
-		<div class="nav__container">
-			<a class="nav__link" href="#">Inicio</a>
-			<a class="nav__link" href="#">Productos</a>
-			<a class="nav__link" href="#">Nosotros</a>
-			<a class="nav__link" href="#">Contacto</a>
-		</div>
+	<!-- MENÚ -->
+	<nav id="menu-principal">
+		<nav class="contenedor-menu">
+			<a href="#">Inicio</a>
+			<a href="#">Quienes somos</a>
+			<a href="#">Dónde estamos</a>
+			<a href="#">Nuestra tienda</a>
+			<a href="#">Contacto</a>
+		</nav>
 	</nav>
 
-	<main>
-		<section class="about">
-			<div class="about__image-container">
-				<img class="about__img" src="assets/images/hecco-decoracion-en-madera-pura-vida.jpg" alt="Decoración en madera Hecco" />
-			</div>
+	<!-- SECCIÓN QUIENES SOMOS -->
+	<section id="seccion-quienes-somos">
+		<div class="contenedor-quienes-somos">
+			<h2 class="titulo-seccion">Quienes somos</h2>
+			<div class="fila">
+				<div class="columna-imagen">
+					<img alt="Decoración en madera Hecco"
+					     class="about__img"
+					     src="assets/images/figura-de-pato-en-madera.jpg" />
+				</div>
+				<div class="columna-texto">
+					<h3>Un equipo joven y preparado para el futuro</h3>
+					<p> Somos hecco, especialistas en diseño y fabricación de complementos de decoración en madera.
+					    Elaboramos nuestros productos de forma artesanal, lo que hace que cada una de nuestras piezas
+					    sea única.</p>
 
-			<div class="about__content">
-				<h1 class="about__title">Decoración en madera</h1>
-				<p class="about__text">
-					Somos hecco, especialistas en diseño y fabricación de complementos de decoración en madera. Elaboramos nuestros productos de forma artesanal, lo que hace que cada una de nuestras piezas sea única.
-				</p>
-				<p class="about__text">
-					Todos nuestros productos están realizados con orgullo en Campo de Criptana, corazón de la Mancha, en la zona centro de España. El mejor país del mundo.
-				</p>
-				<p class="about__text">
-					Amamos lo que hacemos y por eso nos gusta trabajar con las mejores maderas, para ofrecer espacios singulares, donde disfrutamos creando una ambientación en madera única. Especializados en diseños personalizados en madera, nuestro reto es sorprender al cliente.
-				</p>
-			</div>
-		</section>
+					<p>Todos nuestros productos están realizados con orgullo en Campo de Criptana, corazón de la
+					   Mancha, en la zona centro de España. El mejor país del mundo.</p>
 
-		<section class="features" aria-label="Ventajas de comprar en Hecco">
-			<h2 class="features__title">Tu tienda online de <strong>decoración en madera</strong></h2>
-
-			<div class="features__grid">
-				<article class="card">
-					<img class="card__icon" src="assets/icons/Handcrafted.svg" alt="Fabricación artesanal">
-					<h3 class="card__title">Fabricación artesanal</h3>
-					<p class="card__text">
-						Piezas elaboradas a mano, cuidando cada detalle del proceso para ofrecer un acabado único y de alta calidad.
-					</p>
-				</article>
-
-				<article class="card">
-					<img class="card__icon" src="assets/icons/custom.svg" alt="Personalización">
-					<h3 class="card__title">Personalización</h3>
-					<p class="card__text">
-						Posibilidad de grabar nombres, fechas o mensajes especiales para crear un producto totalmente a tu medida.
-					</p>
-				</article>
-
-				<article class="card">
-					<img class="card__icon" src="assets/icons/wood.svg" alt="Madera natural">
-					<h3 class="card__title">Madera natural</h3>
-					<p class="card__text">
-						Trabajamos con maderas naturales seleccionadas por su resistencia, belleza y origen responsable.
-					</p>
-				</article>
-
-				<article class="card">
-					<img class="card__icon" src="assets/icons/payment.svg" alt="Pago seguro">
-					<h3 class="card__title">Pago seguro</h3>
-					<p class="card__text">
-						Todos los pagos se realizan a través de plataformas seguras que garantizan la protección de tus datos.
-					</p>
-				</article>
-
-				<article class="card">
-					<img class="card__icon" src="assets/icons/ship.svg" alt="Envío">
-					<h3 class="card__title">Envío</h3>
-					<p class="card__text">
-						Preparamos cada pedido con cuidado y lo enviamos de forma rápida para que llegue en perfectas condiciones.
-					</p>
-				</article>
-
-				<article class="card">
-					<img class="card__icon" src="assets/icons/support.svg" alt="Atención cercana">
-					<h3 class="card__title">Atención cercana</h3>
-					<p class="card__text">
-						Estamos disponibles para resolver tus dudas y asesorarte en todo momento antes y después de la compra.
-					</p>
-				</article>
-			</div>
-
-
-		</section>
-		<section class="reviews">
-			<div class="reviews__container">
-				<h2 class="reviews__title">Lo que dicen nuestros clientes</h2>
-				<div class="reviews__grid">
-					<blockquote class="review">
-						<div class="review__header">
-							<img src="assets/images/Maria.webp" alt="María García" class="review__avatar">
-						</div>
-						<cite class="review__author">María García</cite>
-						<p class="review__text">"Encargué un nombre personalizado para el cuarto de mi hija y el resultado es precioso. Se nota el cariño en el acabado."</p>
-
-					</blockquote>
-
-					<blockquote class="review">
-						<div class="review__header">
-							<img src="assets/images/Juan.webp" alt="Juan Pedro T." class="review__avatar">
-						</div>
-						<cite class="review__author">Juan Pedro T.</cite>
-						<p class="review__text">"El envío fue rapidísimo y llegó muy bien protegido. La pieza artesanal es aún más bonita en persona que en las fotos."</p>
-
-					</blockquote>
-
-					<blockquote class="review">
-						<div class="review__header">
-							<img src="assets/images/Elena.webp" alt="Elena Rodríguez" class="review__avatar">
-						</div>
-						<cite class="review__author">Elena Rodríguez</cite>
-						<p class="review__text">"Buscaba un regalo único y en Hecco me ayudaron a elegir. La atención al cliente es excepcional y cercana."</p>
-
-					</blockquote>
+					<p>Amamos lo que hacemos y por eso nos gusta trabajar con las mejores maderas, para ofrecer
+					   espacios singulares, donde disfrutamos creando una ambientación en madera única. Especializados
+					   en diseños personalizados en madera, nuestro reto es sorprender al cliente. </p>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-	</main>
-
-	<footer class="footer">
-		<div class="footer__container">
-			<div class="footer__column">
-				<img src="assets/images/hecco-white.svg" alt="hecco" class="footer__logo">
-				<p class="footer__info">Decoración en madera</p>
+	<!-- SECCIÓN OPINIONES -->
+	<section id="seccion-opiniones">
+		<div class="contenedor-seccion-opiniones">
+			<h2 class="titulo-seccion">Opiniones de nuestros clientes</h2>
+			<div class="fila-opiniones">
+				<article class="opinion">
+					<div class="imagen-redonda">
+						<img alt="" src="assets/images/Elena.webp">
+					</div>
+					<p>“La calidad de la madera es increíble y el acabado está cuidado al detalle. Un producto hecho con
+					   mimo.”</p>
+				</article>
+				<article class="opinion">
+					<div class="imagen-redonda">
+						<img alt="Cliente 2" src="assets/images/Juan.webp">
+					</div>
+					<p>“Compré un regalo y fue un acierto total. Diseño precioso, envío rápido y muy bien embalado.”</p>
+				</article>
+				<article class="opinion">
+					<div class="imagen-redonda">
+						<img alt="Cliente 3" src="assets/images/Maria.webp">
+					</div>
+					<p>“Compré un regalo y fue un acierto total. Diseño precioso, envío rápido y muy bien embalado.”</p>
+				</article>
 			</div>
+		</div>
+	</section>
 
-			<div class="footer__column">
-				<h3 class="footer__subtitle">Contacto</h3>
-				<a href="mailto:info@hecco.es" class="footer__info">info@hecco.es</a>
+	<!-- FOOTER -->
+	<footer id="pie-pagina">
+		<div class="contenedor-pie-pagina">
+			<div class="columna-pie-pagina columna-enlaces">
+				<h4>· Enlaces ·</h4>
+				<a href="#">FB</a>
+				<a href="#">TW</a>
+				<a href="#">IN</a>
 			</div>
-
-			<div class="footer__column">
-				<h3 class="footer__subtitle">Síguenos</h3>
-				<div class="footer__social">
-					<a href="#" class="footer__info">IN</a>
-					<span>·</span>
-					<a href="#" class="footer__info">FB</a>
-				</div>
-
+			<div class="columna-pie-pagina columna-direccion">
+				<h4>· Dirección ·</h4>
+				<p>Calle Uruguay,1</p>
+				<p>Campo de Criptana</p>
+			</div>
+			<div class="columna-pie-pagina columna-email">
+				<h4>· Email ·</h4>
+				<a href="mailto:info@hecco.es">info@hecco.es</a>
 			</div>
 		</div>
 	</footer>
-
 </body>
 </html>
