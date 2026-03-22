@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<!-- Configuración básica del documento -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ticket de la compra</title>
+
+	<!-- Enlazamos la hoja de estilos externa -->
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<main>
+		<!-- Título principal del ejercicio -->
 		<h1>Ticket de compra</h1>
+
+		<!-- Texto de apoyo para indicar qué debe hacer el usuario -->
 		<p>Introduce un concepto y su importe para ir construyendo el ticket de la compra.</p>
 
+		<!-- Bloque del formulario con los dos inputs y los botones -->
 		<section class="formulario">
 			<div class="campo campo-concepto">
+				<!-- Input para escribir el nombre del producto o concepto -->
 				<label for="concepto">Concepto</label>
 				<input id="concepto" type="text" placeholder="Ejemplo: Pan">
 			</div>
 
 			<div class="campo campo-importe">
+				<!-- Input numérico para escribir el importe, permitiendo decimales -->
 				<label for="importe">Importe</label>
 				<input id="importe" type="number" step="0.01" placeholder="Ejemplo: 1.25">
 			</div>
 
 			<div class="campo acciones">
+				<!-- Grupo de botones para añadir productos o reiniciar el ejercicio -->
 				<label>Acciones</label>
 				<div class="grupo-botones">
 					<button id="btn-anadir" type="button">Añadir</button>
@@ -31,15 +41,22 @@
 			</div>
 		</section>
 
+		<!-- Bloque donde se muestra la lista y el total acumulado -->
 		<section class="resultado">
 			<h2>Lista de la compra</h2>
+
+			<!-- Esta capa mostrará los conceptos añadidos con JavaScript -->
 			<div id="lista" class="lista">
+				<!-- Mensaje inicial que desaparece cuando se añade el primer concepto -->
 				<p class="vacio">Todavía no hay conceptos añadidos.</p>
 			</div>
+
+			<!-- Aquí se muestra el total acumulado de los importes -->
 			<h2 class="total">Total: <span id="total">0</span></h2>
 		</section>
 	</main>
 
+	<!-- Enlazamos el archivo JavaScript al final para que cargue cuando el HTML ya existe -->
 	<script src="app.js"></script>
 </body>
 </html>
