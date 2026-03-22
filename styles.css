@@ -1,0 +1,191 @@
+:root {
+	--fondo-inicio: #eff6ff;
+	--fondo-fin: #dbeafe;
+	--tarjeta: #ffffff;
+	--texto: #0f172a;
+	--texto-suave: #475569;
+	--azul: #2563eb;
+	--azul-oscuro: #1d4ed8;
+	--gris-claro: #f8fafc;
+	--borde: #cbd5e1;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: Arial, Helvetica, sans-serif;
+	background: linear-gradient(180deg, var(--fondo-inicio) 0%, var(--fondo-fin) 100%);
+	color: var(--texto);
+	padding: 1rem;
+}
+
+main {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 2rem;
+	background: var(--tarjeta);
+	border-radius: 1rem;
+	box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 0.75rem;
+	font-size: 2rem;
+}
+
+p {
+	margin-top: 0;
+	line-height: 1.5;
+	color: var(--texto-suave);
+}
+
+.formulario {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+
+.campo {
+	display: flex;
+	flex-direction: column;
+	gap: 0.45rem;
+	min-width: 0;
+}
+
+.campo-concepto {
+	flex: 1 1 auto;
+}
+
+.campo-importe {
+	flex: 1 1 auto;
+}
+
+label {
+	font-weight: bold;
+}
+
+input {
+	width: 100%;
+	padding: 0.85rem 1rem;
+	border: 1px solid var(--borde);
+	border-radius: 0.7rem;
+	font-size: 1rem;
+}
+
+input:focus {
+	outline: 2px solid #93c5fd;
+	outline-offset: 1px;
+}
+
+.acciones {
+	width: 100%;
+}
+
+.grupo-botones {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 0.75rem;
+}
+
+button {
+	flex: 1 1 0;
+	padding: 0.85rem 1.2rem;
+	border: none;
+	border-radius: 0.7rem;
+	background: var(--azul);
+	color: #ffffff;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+button:hover {
+	background: var(--azul-oscuro);
+}
+
+button.secundario {
+	background: #e2e8f0;
+	color: #1e293b;
+}
+
+button.secundario:hover {
+	background: #cbd5e1;
+}
+
+.resultado {
+	margin-top: 1.5rem;
+}
+
+.resultado h2 {
+	margin-bottom: 0.75rem;
+}
+
+.total {
+	margin-top: 1rem;
+	margin-bottom: 0;
+}
+
+.lista {
+	height: 14rem;
+	padding: 1rem;
+	border-radius: 0.75rem;
+	background: var(--gris-claro);
+	border: 1px solid var(--borde);
+	overflow-y: auto;
+}
+
+.lista p {
+	margin-bottom: 0.75rem;
+	color: var(--texto);
+}
+
+.lista p:last-child {
+	margin-bottom: 0;
+}
+
+.vacio {
+	color: var(--texto-suave);
+}
+
+@media (min-width: 992px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1.5rem;
+	}
+
+	.formulario {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: end;
+	}
+
+	.campo-concepto {
+		flex: 2 1 16rem;
+	}
+
+	.campo-importe {
+		flex: 1 1 10rem;
+	}
+
+	.acciones {
+		flex: 0 1 auto;
+		width: auto;
+	}
+
+	.grupo-botones {
+		flex-wrap: wrap;
+	}
+
+	button {
+		flex: 0 1 auto;
+	}
+}
