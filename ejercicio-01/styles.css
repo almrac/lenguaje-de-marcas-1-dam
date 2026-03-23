@@ -1,0 +1,173 @@
+:root {
+	--bg-top: #eff6ff;
+	--bg-bottom: #dbeafe;
+	--card: #ffffff;
+	--text: #0f172a;
+	--muted: #475569;
+	--primary: #2563eb;
+	--primary-hover: #1d4ed8;
+	--border: #cbd5e1;
+	--panel: #f8fafc;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+	color: var(--text);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
+}
+
+main {
+	width: min(100%, 42rem);
+	background: var(--card);
+	border-radius: 1rem;
+	box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+	padding: 2rem;
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 0.75rem;
+}
+
+p {
+	margin-top: 0;
+	line-height: 1.5;
+	color: var(--muted);
+}
+
+.formulario {
+	display: grid;
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+
+.campo {
+	display: grid;
+	gap: 0.45rem;
+}
+
+label {
+	font-weight: 600;
+}
+
+input,
+select {
+	width: 100%;
+	padding: 0.85rem 1rem;
+	border: 1px solid var(--border);
+	border-radius: 0.7rem;
+	font: inherit;
+	color: var(--text);
+	background: #ffffff;
+}
+
+input:focus,
+select:focus {
+	outline: 2px solid #93c5fd;
+	outline-offset: 2px;
+	border-color: var(--primary);
+}
+
+.campo-imagen {
+	justify-items: start;
+}
+
+.etiqueta-imagen {
+	font-weight: 600;
+}
+
+.imagen-producto {
+	display: block;
+	width: 12.5rem;
+	height: 12.5rem;
+	object-fit: cover;
+	border-radius: 0.9rem;
+	border: 1px solid var(--border);
+	background: var(--panel);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.campo-checkbox {
+	padding: 0.25rem 0;
+}
+
+.checkbox-linea {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.checkbox-linea input {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin: 0;
+	flex: 0 0 auto;
+}
+
+.acciones {
+	margin-top: 0.5rem;
+}
+
+button {
+	padding: 0.85rem 1.2rem;
+	border: none;
+	border-radius: 0.7rem;
+	background: var(--primary);
+	color: #ffffff;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+button:hover {
+	background: var(--primary-hover);
+}
+
+.mensaje-estado {
+	margin-top: 1.5rem;
+	padding: 1rem;
+	border-radius: 0.75rem;
+	background: #eff6ff;
+	border: 1px solid #bfdbfe;
+	line-height: 1.5;
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: #1e3a8a;
+}
+
+.volver {
+	display: inline-block;
+	margin-top: 1rem;
+	padding: 0.7rem 1rem;
+	border-radius: 0.7rem;
+	background: #e2e8f0;
+	color: #1e293b;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.volver:hover {
+	background: #cbd5e1;
+}
+
+@media (max-width: 40rem) {
+	body {
+		align-items: stretch;
+	}
+
+	main {
+		padding: 1.25rem;
+	}
+}

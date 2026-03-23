@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-labelledby="titulo descripcion">
+	<title id="titulo">Sin producto seleccionado</title>
+	<desc id="descripcion">Imagen de marcador de posicion cuando no hay producto seleccionado.</desc>
+	<rect width="200" height="200" rx="18" fill="#e2e8f0"/>
+	<rect x="36" y="36" width="128" height="128" rx="16" fill="#f8fafc" stroke="#94a3b8" stroke-width="3" stroke-dasharray="8 6"/>
+	<text x="100" y="93" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#334155">Sin</text>
+	<text x="100" y="117" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#334155">producto</text>
+</svg>
