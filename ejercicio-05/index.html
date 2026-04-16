@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>05. Videoclub</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
+
+		main {
+			width: 100%;
+			max-width: 80dvw;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		.intro {
+			margin-top: 1rem;
+			padding: 1.25rem 1.5rem;
+			border-radius: 0.9rem;
+			background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+			border: 1px solid #bfdbfe;
+		}
+
+		.intro-etiqueta {
+			display: inline-block;
+			margin-bottom: 0.65rem;
+			padding: 0.35rem 0.7rem;
+			border-radius: 999px;
+			background: #dbeafe;
+			color: #1d4ed8;
+			font-size: 0.8rem;
+			font-weight: 700;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+		}
+
+		.intro p {
+			margin: 0;
+			font-size: 1rem;
+			color: #334155;
+		}
+
+		.intro strong {
+			color: #0f172a;
+		}
+
+		.paneles {
+			margin-top: 1rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
+			align-items: stretch;
+		}
+
+		.bloque-conversion {
+			margin-top: 1rem;
+			background: #ffffff;
+			border: 1px solid #cbd5e1;
+			border-radius: 0.75rem;
+			padding: 0.75rem;
+		}
+
+		.bloque-imagen {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.bloque-conversion h2 {
+			margin: 0 0 0.5rem 0;
+			font-size: 1rem;
+		}
+
+		.bloque-conversion textarea {
+			width: 100%;
+			min-height: 70dvh;
+			resize: vertical;
+			box-sizing: border-box;
+			border: 1px solid #cbd5e1;
+			border-radius: 0.5rem;
+			padding: 0.65rem;
+			font-family: Consolas, "Courier New", monospace;
+			font-size: 0.95rem;
+			background: #f8fafc;
+			color: #0f172a;
+		}
+
+		.bloque-conversion img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			flex: 1;
+			border: 1px solid #cbd5e1;
+			border-radius: 0.5rem;
+			background: #f8fafc;
+			object-fit: cover;
+		}
+
+		.estado-imagen {
+			display: none;
+			flex: 1;
+			align-items: center;
+			justify-content: center;
+			padding: 1rem;
+			border: 1px dashed #94a3b8;
+			border-radius: 0.5rem;
+			background: #f8fafc;
+			color: #475569;
+			text-align: center;
+		}
+
+		.descarga-pdf {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.8rem 1.15rem;
+			border-radius: 0.7rem;
+			background: #1d4ed8;
+			color: #ffffff;
+			text-decoration: none;
+			font-weight: 700;
+			transition: background 0.2s ease;
+		}
+
+		.descarga-pdf:hover {
+			background: #1e40af;
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			margin-left: 0.75rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+
+		.error {
+			color: #b91c1c;
+			font-weight: 600;
+		}
+
+		@media (max-width: 900px) {
+			.paneles {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>05. Videoclub</h1>
+		<div class="intro">
+			<span class="intro-etiqueta">Enunciado</span>
+			<p>Crear un JSON para un <strong>videoclub</strong> con informacion sobre <strong>clientes</strong>, <strong>peliculas</strong> y un ejemplo de <strong>alquiler</strong> que relacione quien alquila, que pelicula se lleva y las fechas del prestamo.</p>
+		</div>
+		<div class="paneles">
+			<div class="bloque-conversion">
+				<h2>JSON</h2>
+				<textarea id="json" readonly>Cargando archivo JSON...</textarea>
+			</div>
+			<div class="bloque-conversion bloque-imagen">
+				<h2>Imagen de validacion</h2>
+				<img id="captura" src="validcion_videoclub.png" alt="Captura de la validacion del archivo JSON">
+				<div id="estado-imagen" class="estado-imagen">Anade aqui la captura de validacion con el nombre validacion_05.png.</div>
+			</div>
+		</div>
+		<a class="descarga-pdf" href="validcion_videoclub.png" download>Descargar validacion</a>
+		<a class="volver" href="../index.html">Volver al indice</a>
+	</main>
+
+	<script>
+		const jsonTextarea = document.getElementById("json");
+		const captura = document.getElementById("captura");
+		const estadoImagen = document.getElementById("estado-imagen");
+
+		fetch("videoclub.json")
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error("No se pudo cargar el archivo JSON.");
+				}
+				return response.json();
+			})
+			.then((data) => {
+				jsonTextarea.value = JSON.stringify(data, null, 4);
+			})
+			.catch(() => {
+				jsonTextarea.value = "Error al cargar el archivo JSON.";
+				jsonTextarea.classList.add("error");
+			});
+
+		captura.addEventListener("error", () => {
+			captura.style.display = "none";
+			estadoImagen.style.display = "flex";
+		});
+	</script>
+</body>
+</html>

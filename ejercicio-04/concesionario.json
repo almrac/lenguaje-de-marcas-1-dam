@@ -1,0 +1,143 @@
+{
+  "concesionarios": [
+    {
+      "nombre": "AutoValencia",
+      "direccion": "Calle Mayor, 20",
+      "poblacion": "Valencia",
+      "telefono": "963123456",
+      "movil": "600123456",
+      "propietario": {
+        "nombre": "Alberto Gomez",
+        "direccion": "Calle Mayor, 22",
+        "poblacion": "Valencia",
+        "telefono": "963123456",
+        "movil": "600123456"
+      },
+      "vehiculos": [
+        {
+          "marca": "Toyota",
+          "matricula": "1234 ABC",
+          "tipo": "Turismo",
+          "modelo": "Corolla",
+          "cilindrada": 1600,
+          "color": "Rojo",
+          "combustible": "Hibrido",
+          "asegurado": "Si"
+        },
+        {
+          "marca": "Seat",
+          "matricula": "5678 DEF",
+          "tipo": "Turismo",
+          "modelo": "Leon",
+          "cilindrada": 1400,
+          "color": "Azul",
+          "combustible": "Gasolina",
+          "asegurado": "No"
+        },
+        {
+          "marca": "Kia",
+          "matricula": "9012 GHI",
+          "tipo": "SUV",
+          "modelo": "Sportage",
+          "cilindrada": 2000,
+          "color": "Negro",
+          "combustible": "Diesel",
+          "asegurado": "Si"
+        }
+      ]
+    },
+    {
+      "nombre": "MotorMadrid",
+      "direccion": "Avenida de la Paz, 10",
+      "poblacion": "Madrid",
+      "telefono": "914567890",
+      "movil": "600987654",
+      "propietario": {
+        "nombre": "Laura Martinez",
+        "direccion": "Avenida de la Paz, 12",
+        "poblacion": "Madrid",
+        "telefono": "914567890",
+        "movil": "600987654"
+      },
+      "vehiculos": [
+        {
+          "marca": "Ford",
+          "matricula": "3456 JKL",
+          "tipo": "Turismo",
+          "modelo": "Focus",
+          "cilindrada": 1600,
+          "color": "Blanco",
+          "combustible": "Gasolina",
+          "asegurado": "Si"
+        },
+        {
+          "marca": "Renault",
+          "matricula": "7890 MNO",
+          "tipo": "SUV",
+          "modelo": "Captur",
+          "cilindrada": 1200,
+          "color": "Gris",
+          "combustible": "Diesel",
+          "asegurado": "No"
+        },
+        {
+          "marca": "Hyundai",
+          "matricula": "2345 PQR",
+          "tipo": "Turismo",
+          "modelo": "i30",
+          "cilindrada": 1400,
+          "color": "Rojo",
+          "combustible": "Hibrido",
+          "asegurado": "Si"
+        }
+      ]
+    },
+    {
+      "nombre": "AutoSevilla",
+      "direccion": "Calle del Sol, 5",
+      "poblacion": "Sevilla",
+      "telefono": "955123456",
+      "movil": "600654321",
+      "propietario": {
+        "nombre": "Carlos Fernandez",
+        "direccion": "Calle del Sol, 7",
+        "poblacion": "Sevilla",
+        "telefono": "955123456",
+        "movil": "600654321"
+      },
+      "vehiculos": [
+        {
+          "marca": "Volkswagen",
+          "matricula": "6789 STU",
+          "tipo": "Turismo",
+          "modelo": "Golf",
+          "cilindrada": 1600,
+          "color": "Azul",
+          "combustible": "Gasolina",
+          "asegurado": "Si"
+        },
+        {
+          "marca": "Nissan",
+          "matricula": "0123 VWX",
+          "tipo": "SUV",
+          "modelo": "Qashqai",
+          "cilindrada": 1300,
+          "color": "Negro",
+          "combustible": "Diesel",
+          "asegurado": "No"
+        },
+        {
+          "marca": "Mazda",
+          "matricula": "4567 YZ",
+          "tipo": "Turismo",
+          "modelo": "3",
+          "cilindrada": 1500,
+          "color": "Blanco",
+          "combustible": "Hibrido",
+          "asegurado": "Si"
+        }
+      ]
+    }
+  ]
+}
+

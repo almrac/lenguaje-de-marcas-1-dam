@@ -1,0 +1,21 @@
+{
+  "mensaje": [
+    {
+  "remitente": {
+    "nombre": "Alfredo Reino" ,
+    "email": "alf@ibium.com"
+  },
+  "destinatario": {
+    "nombre": "Bill Clinton",
+    "email": "president@whitehouse.gov"
+  },
+      "asunto": "Hola Bill" ,
+      "texto":{
+        "parrafo1": "Hola Bill, ¿cómo estás? Espero que todo vaya bien en la Casa Blanca.",
+        "parrafo2": "Quería contarte que estoy organizando una reunión de antiguos alumnos de la universidad y me encantaría que pudieras asistir. Será el próximo mes en Nueva York y habrá comida, música y muchas actividades divertidas.",
+        "parrafo3": "Si estás interesado en asistir, por favor házmelo saber lo antes posible para que pueda reservar tu lugar. Me encantaría verte y ponernos al día después de tantos años.",
+        "parrafo4": "Un abrazo fuerte, Alfredo"
+      }
+    }
+  ]
+}

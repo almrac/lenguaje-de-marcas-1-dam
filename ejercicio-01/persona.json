@@ -1,0 +1,34 @@
+{
+  "personas": [
+    {
+      "nombre": "Juan Pardo",
+      "nacimiento": {
+        "dia": "10",
+        "mes": "Abril",
+        "anyo": "1982"
+      },
+      "direccion": {
+        "calle": "caoba, 1",
+        "poblacion": "Madrid",
+        "provincia": "Madrid",
+        "cpostal": "28005"
+      },
+      "sexo": "varon"
+    },
+    {
+      "nombre": "Maria Garcia",
+      "nacimiento": {
+        "dia": "22",
+        "mes": "Marzo",
+        "anyo": "1990"
+      },
+      "direccion": {
+        "calle": "olivo, 5",
+        "poblacion": "Barcelona",
+        "provincia": "Barcelona",
+        "cpostal": "36573"
+      },
+      "sexo": "mujer"
+    }
+  ]
+}

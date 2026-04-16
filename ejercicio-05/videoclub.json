@@ -1,0 +1,90 @@
+{
+  "videoclub": {
+    "facturas": [
+      {
+        "numeroFactura": "F-2026-001",
+        "cliente": {
+          "idCliente": "CL001",
+          "nombre": "Laura",
+          "primerApellido": "Moreno",
+          "segundoApellido": "Garcia",
+          "dni": "12345678A",
+          "telefonos": [
+            "600123456",
+            "911234567"
+          ]
+        },
+        "ticket": {
+          "formaPago": "tarjeta",
+          "importeTotal": 7.5,
+          "alquileres": {
+            "fechaDevolucion": "2026-04-20",
+            "peliculas": [
+              {
+                "idPelicula": "P001",
+                "valoracion": 9.1,
+                "titulo": "Origen",
+                "genero": "ciencia ficcion",
+                "duracion": 148,
+                "actores": [
+                  {
+                    "nombre": "Leonardo",
+                    "apellidos": "DiCaprio"
+                  },
+                  {
+                    "nombre": "Elliot",
+                    "apellidos": "Page"
+                  }
+                ],
+                "caratula": "origen.jpg"
+              },
+              {
+                "idPelicula": "P002",
+                "valoracion": 8.5,
+                "titulo": "Gladiator",
+                "genero": "accion",
+                "duracion": 155,
+                "actores": [
+                  {
+                    "nombre": "Russell",
+                    "apellidos": "Crowe"
+                  },
+                  {
+                    "nombre": "Joaquin",
+                    "apellidos": "Phoenix"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "numeroFactura": "F-2026-002",
+        "cliente": {
+          "idCliente": "CL002",
+          "nombre": "Diego",
+          "primerApellido": "Navarro",
+          "segundoApellido": "Lopez",
+          "dni": "87654321B",
+          "telefonos": [
+            "600987654"
+          ]
+        },
+        "ticket": {
+          "formaPago": "efectivo",
+          "importeTotal": 14.95,
+          "compras": {
+            "dvds": [
+              {
+                "titulo": "Matrix",
+                "fechaSalidaMercado": "1999-09-21",
+                "extras": true
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
