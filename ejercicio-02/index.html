@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>02. JSON moviles</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
+
+		main {
+			width: 100%;
+			max-width: 70rem;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		.intro {
+			margin-top: 1rem;
+			padding: 1.25rem 1.5rem;
+			border-radius: 0.9rem;
+			background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+			border: 1px solid #bfdbfe;
+		}
+
+		.intro-etiqueta {
+			display: inline-block;
+			margin-bottom: 0.65rem;
+			padding: 0.35rem 0.7rem;
+			border-radius: 999px;
+			background: #dbeafe;
+			color: #1d4ed8;
+			font-size: 0.8rem;
+			font-weight: 700;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+		}
+
+		.intro p {
+			margin: 0;
+			font-size: 1rem;
+			color: #334155;
+		}
+
+		.intro strong {
+			color: #0f172a;
+		}
+
+		.paneles {
+			margin-top: 1rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+
+		.bloque-conversion {
+			margin-top: 1rem;
+			background: #ffffff;
+			border: 1px solid #cbd5e1;
+			border-radius: 0.75rem;
+			padding: 0.75rem;
+		}
+
+		.bloque-conversion h2 {
+			margin: 0 0 0.5rem 0;
+			font-size: 1rem;
+		}
+
+		#contenedorMoviles {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			margin-top: 1rem;
+		}
+
+		.tarjeta-movil {
+			flex: 1 1 16rem;
+			max-width: calc(33.333% - 0.67rem);
+			border: 1px solid #cbd5e1;
+			border-radius: 0.9rem;
+			background: #ffffff;
+			padding: 0.9rem;
+			box-sizing: border-box;
+			box-shadow: 0 0.5rem 1rem rgba(15, 23, 42, 0.08);
+		}
+
+		.tarjeta-movil h3 {
+			margin: 0 0 0.5rem 0;
+			font-size: 1.1rem;
+		}
+
+		.imagen-movil {
+			width: 100%;
+			aspect-ratio: 4 / 5;
+			object-fit: cover;
+			border: 1px solid #cbd5e1;
+			border-radius: 0.5rem;
+			background: #f8fafc;
+			display: block;
+			margin-bottom: 0.8rem;
+		}
+
+		.dato-movil {
+			margin: 0.35rem 0;
+			color: #334155;
+		}
+
+		.estado {
+			margin: 0;
+			padding: 0.75rem 0.9rem;
+			border-radius: 0.5rem;
+			background: #eff6ff;
+			border: 1px solid #bfdbfe;
+			color: #1e3a8a;
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+
+		.error {
+			color: #b91c1c;
+			font-weight: 600;
+		}
+
+		@media (max-width: 900px) {
+			.tarjeta-movil {
+				max-width: calc(50% - 0.5rem);
+			}
+		}
+
+		@media (max-width: 640px) {
+			main {
+				padding: 1.25rem;
+			}
+
+			.tarjeta-movil {
+				max-width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<!-- Título principal del ejercicio. -->
+		<h1>02. JSON moviles</h1>
+
+		<!-- Caja introductoria con el objetivo de la práctica. -->
+		<div class="intro">
+			<span class="intro-etiqueta">Enunciado</span>
+			<p>Consumir un archivo JSON con <strong>fetch</strong> y mostrar una <strong>card o ficha</strong> por cada movil, incluyendo su imagen y sus caracteristicas principales generadas con JavaScript.</p>
+		</div>
+
+		<!-- Contenedor general del contenido generado a partir del JSON. -->
+		<div class="paneles">
+			<div class="bloque-conversion">
+				<h2>Catalogo de moviles</h2>
+
+				<!-- Mensaje de estado: informa si el JSON se está cargando o si hubo error. -->
+				<p id="estado" class="estado">Cargando datos del archivo JSON...</p>
+
+				<!--
+					Las tarjetas ya existen en el HTML.
+					Después, JavaScript usará getElementById para rellenar cada una con los datos del JSON.
+				-->
+				<div id="contenedorMoviles">
+					<div class="tarjeta-movil" id="tarjeta-1">
+						<img class="imagen-movil" id="imagen-1" src="" alt="Imagen del movil 1">
+						<h3 id="titulo-1">Cargando movil...</h3>
+						<p class="dato-movil" id="precio-1">Precio:</p>
+						<p class="dato-movil" id="almacenamiento-1">Almacenamiento:</p>
+						<p class="dato-movil" id="color-1">Color:</p>
+						<p class="dato-movil" id="pantalla-1">Pantalla:</p>
+					</div>
+
+					<div class="tarjeta-movil" id="tarjeta-2">
+						<img class="imagen-movil" id="imagen-2" src="" alt="Imagen del movil 2">
+						<h3 id="titulo-2">Cargando movil...</h3>
+						<p class="dato-movil" id="precio-2">Precio:</p>
+						<p class="dato-movil" id="almacenamiento-2">Almacenamiento:</p>
+						<p class="dato-movil" id="color-2">Color:</p>
+						<p class="dato-movil" id="pantalla-2">Pantalla:</p>
+					</div>
+
+					<div class="tarjeta-movil" id="tarjeta-3">
+						<img class="imagen-movil" id="imagen-3" src="" alt="Imagen del movil 3">
+						<h3 id="titulo-3">Cargando movil...</h3>
+						<p class="dato-movil" id="precio-3">Precio:</p>
+						<p class="dato-movil" id="almacenamiento-3">Almacenamiento:</p>
+						<p class="dato-movil" id="color-3">Color:</p>
+						<p class="dato-movil" id="pantalla-3">Pantalla:</p>
+					</div>
+
+					<div class="tarjeta-movil" id="tarjeta-4">
+						<img class="imagen-movil" id="imagen-4" src="" alt="Imagen del movil 4">
+						<h3 id="titulo-4">Cargando movil...</h3>
+						<p class="dato-movil" id="precio-4">Precio:</p>
+						<p class="dato-movil" id="almacenamiento-4">Almacenamiento:</p>
+						<p class="dato-movil" id="color-4">Color:</p>
+						<p class="dato-movil" id="pantalla-4">Pantalla:</p>
+					</div>
+
+					<div class="tarjeta-movil" id="tarjeta-5">
+						<img class="imagen-movil" id="imagen-5" src="" alt="Imagen del movil 5">
+						<h3 id="titulo-5">Cargando movil...</h3>
+						<p class="dato-movil" id="precio-5">Precio:</p>
+						<p class="dato-movil" id="almacenamiento-5">Almacenamiento:</p>
+						<p class="dato-movil" id="color-5">Color:</p>
+						<p class="dato-movil" id="pantalla-5">Pantalla:</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+
+	<script>
+		// Referencia al elemento que muestra mensajes al usuario.
+		const estado = document.getElementById("estado");
+
+		/*
+			Esta función recibe:
+			- un objeto "movil" del JSON
+			- el número de tarjeta que hay que rellenar
+
+			Con getElementById localizamos cada elemento del HTML
+			y cambiamos su contenido o sus atributos.
+		*/
+		function rellenarTarjeta(movil, numeroTarjeta) {
+			document.getElementById("imagen-" + numeroTarjeta).src = movil.imagen;
+			document.getElementById("imagen-" + numeroTarjeta).alt = "Imagen de " + movil.marca + " " + movil.modelo;
+			document.getElementById("titulo-" + numeroTarjeta).textContent = movil.marca + " " + movil.modelo;
+			document.getElementById("precio-" + numeroTarjeta).textContent = "Precio: " + movil.precio + " EUR";
+			document.getElementById("almacenamiento-" + numeroTarjeta).textContent = "Almacenamiento: " + movil.almacenamiento;
+			document.getElementById("color-" + numeroTarjeta).textContent = "Color: " + movil.color;
+			document.getElementById("pantalla-" + numeroTarjeta).textContent = "Pantalla: " + movil.pantalla;
+		}
+
+		// fetch() carga el archivo JSON de forma asíncrona.
+		fetch("moviles.json")
+				.then((response) => {
+					// Si la respuesta no es correcta, lanzamos un error manualmente.
+					if (!response.ok) {
+						throw new Error("No se pudo cargar el archivo JSON.");
+					}
+
+					// Convertimos la respuesta a objeto JavaScript.
+					return response.json();
+				})
+				.then((data) => {
+					// Si todo ha ido bien, actualizamos el mensaje de estado.
+					estado.textContent = "Estos son los moviles cargados desde el archivo JSON:";
+
+					// Recorremos el array del JSON y rellenamos una tarjeta por cada móvil.
+					for (let i = 0; i < data.length; i++) {
+						rellenarTarjeta(data[i], i + 1);
+					}
+
+					/*
+						Si hubiera menos móviles en el JSON que tarjetas en el HTML,
+						ocultamos las tarjetas sobrantes para que no queden vacías.
+					*/
+					for (let i = data.length + 1; i <= 5; i++) {
+						document.getElementById("tarjeta-" + i).style.display = "none";
+					}
+				})
+				.catch((error) => {
+					// Si fetch falla o el archivo no existe, mostramos el error en pantalla.
+					estado.textContent = "Error al cargar el archivo JSON: " + error.message;
+					estado.classList.add("error");
+				});
+	</script>
+</body>
+</html>

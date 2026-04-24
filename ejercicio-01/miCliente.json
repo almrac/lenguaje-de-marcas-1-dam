@@ -1,0 +1,22 @@
+{
+    "id": 1001,
+    "nombre": "Laura",
+    "apellidos": "Sanchez Romero",
+    "email": "laura.sanchez@email.com",
+    "telefono": "612345678",
+    "activo": true,
+    "direccion": {
+        "calle": "Avenida de la Constitucion",
+        "numero": 27,
+        "piso": "3A",
+        "codigoPostal": "41004",
+        "poblacion": "Sevilla",
+        "provincia": "Sevilla",
+        "pais": "Espana"
+    },
+    "aficiones": [
+        "viajar",
+        "fotografia",
+        "cocinar"
+    ]
+}

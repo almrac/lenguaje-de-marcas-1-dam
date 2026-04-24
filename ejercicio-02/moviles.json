@@ -1,0 +1,47 @@
+[
+    {
+        "marca": "Samsung",
+        "modelo": "Galaxy S24",
+        "precio": 909.99,
+        "almacenamiento": "256 GB",
+        "color": "Negro",
+        "pantalla": "6.2 pulgadas",
+        "imagen": "imagenes/samsung-galaxy-s24.svg"
+    },
+    {
+        "marca": "Apple",
+        "modelo": "iPhone 15",
+        "precio": 959.00,
+        "almacenamiento": "128 GB",
+        "color": "Azul",
+        "pantalla": "6.1 pulgadas",
+        "imagen": "imagenes/iphone-15.svg"
+    },
+    {
+        "marca": "Xiaomi",
+        "modelo": "Redmi Note 13 Pro",
+        "precio": 349.90,
+        "almacenamiento": "256 GB",
+        "color": "Lila",
+        "pantalla": "6.67 pulgadas",
+        "imagen": "imagenes/xiaomi-redmi-note-13-pro.svg"
+    },
+    {
+        "marca": "Google",
+        "modelo": "Pixel 8",
+        "precio": 699.00,
+        "almacenamiento": "128 GB",
+        "color": "Verde",
+        "pantalla": "6.2 pulgadas",
+        "imagen": "imagenes/google-pixel-8.svg"
+    },
+    {
+        "marca": "Motorola",
+        "modelo": "Edge 50 Fusion",
+        "precio": 399.99,
+        "almacenamiento": "256 GB",
+        "color": "Azul",
+        "pantalla": "6.7 pulgadas",
+        "imagen": "imagenes/motorola-edge-50-fusion.svg"
+    }
+]
