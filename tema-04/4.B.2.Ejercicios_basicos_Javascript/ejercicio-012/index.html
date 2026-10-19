@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 12 - Contador de Vocales</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		main {
+			max-width: 42rem;
+			margin: 3rem auto;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		button {
+			padding: 0.85rem 1.2rem;
+			border: none;
+			border-radius: 0.7rem;
+			background: #2563eb;
+			color: #ffffff;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background: #1d4ed8;
+		}
+
+		#resultado {
+			margin-top: 1.5rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Contador de Vocales</h1>
+		<p>Pulsa el botón para escribir una frase y contar cuántas letras <code>a</code> contiene.</p>
+		<button id="btn-contar" type="button" onclick="contarAes()">Contar letras a</button>
+		<div id="resultado">Todavía no se ha contado ninguna letra.</div>
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+
+	<script>
+		// Esta función se ejecuta al pulsar el botón.
+		function contarAes() {
+			// Pedimos al usuario una frase.
+			let frase = prompt("Escribe una frase");
+
+			// Este contador irá sumando cuántas letras a encontramos.
+			let contador = 0;
+
+			// Si el usuario pulsa "Cancelar", detenemos la función.
+			if (frase === null) {
+				document.getElementById("resultado").innerHTML = "No ha introducido ninguna frase";
+				return;
+			}
+
+			// Recorremos la frase letra por letra.
+			for (let i = 0; i < frase.length; i++) {
+				// Si la letra actual es a o A, aumentamos el contador.
+				if (frase[i] === "a" || frase[i] === "A") {
+					contador++;
+				}
+			}
+
+			// Mostramos cuántas letras a contiene la frase.
+			document.getElementById("resultado").innerHTML =
+					"La frase contiene " + contador + " letras a.";
+		}
+	</script>
+</body>
+</html>

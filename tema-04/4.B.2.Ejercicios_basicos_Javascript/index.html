@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>4.B.1 – Índice de Videoejercicioes JavaScrip I</title>
+	<style>
+		:root {
+			--bg: #f4f6fb;
+			--card: #ffffff;
+			--text: #1f2937;
+			--muted: #475569;
+			--primary: #1d4ed8;
+			--primary-soft: #eff6ff;
+			--primary-border: #dbeafe;
+		}
+
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: radial-gradient(circle at top, #f8faff 0%, var(--bg) 55%);
+			color: var(--text);
+		}
+
+		main {
+			max-width: 71.25rem;
+			margin: 2.5rem auto;
+			padding: 2rem;
+			background: var(--card);
+			border-radius: 0.75rem;
+			box-shadow: 0 0.625rem 1.625rem rgba(15, 23, 42, 0.08);
+			border: 0.0625rem solid #e5e7eb;
+		}
+
+		h1 {
+			margin-top: 0;
+			font-size: 1.95rem;
+			line-height: 1.2;
+			letter-spacing: 0.0125rem;
+			color: #0f172a;
+			margin-bottom: 0.875rem;
+			padding-bottom: 0.625rem;
+			border-bottom: 0.125rem solid #e2e8f0;
+		}
+
+		p {
+			margin-bottom: 1.625rem;
+			color: var(--muted);
+			line-height: 1.5;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: grid;
+			gap: 0.75rem;
+		}
+
+		li a {
+			display: flex;
+			align-items: center;
+			gap: 0.625rem;
+			padding: 0.75rem 0.875rem;
+			text-decoration: none;
+			color: var(--primary);
+			background: var(--primary-soft);
+			border: 0.0625rem solid var(--primary-border);
+			border-radius: 0.625rem;
+			font-weight: 600;
+			line-height: 1.35;
+			transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+		}
+
+		li a::before {
+			content: "->";
+			flex: 0 0 auto;
+			opacity: 0.4;
+		}
+
+		li a:hover {
+			background: #dbeafe;
+			transform: translateX(0.1875rem) translateY(-0.0625rem);
+			box-shadow: 0 0.25rem 0.625rem rgba(29, 78, 216, 0.12);
+		}
+
+		li a:focus-visible {
+			outline: 0.125rem solid var(--primary);
+			outline-offset: 0.125rem;
+		}
+
+
+		@media (max-width: 40rem) {
+			main {
+				margin: 1.25rem 0.875rem;
+				padding: 1.25rem;
+			}
+
+			h1 {
+				font-size: 1.4rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+	<h1>4.B.2 – Ejercicios báscos de JavaScript</h1>
+	<p>Selecciona un ejercicio para ver su página publicada.</p>
+
+	<ul>
+		<li><a href="ejercicio-01/">1. Lanzamiento de dados</a></li>
+		<li><a href="ejercicio-02/">2. Validador de correos</a></li>
+		<li><a href="ejercicio-03/">3. Día de la semana</a></li>
+		<li><a href="ejercicio-04/">4. Validador de rango</a></li>
+		<li><a href="ejercicio-05/">5. Buscador en Array</a></li>
+		<li><a href="ejercicio-06/">6. Acumulador</a></li>
+		<li><a href="ejercicio-07/">7. Inversor de Strings</a></li>
+		<li><a href="ejercicio-08/">8. Filtrado de pares</a></li>
+		<li><a href="ejercicio-09/">9. Login con intentos</a></li>
+		<li><a href="ejercicio-010/">10. Generador de patrones</a></li>
+		<li><a href="ejercicio-011/">11. Máximo de una lista</a></li>
+		<li><a href="ejercicio-012/">12. Contador de Vocales</a></li>
+	</ul>
+	</main>
+
+</body>
+</html>

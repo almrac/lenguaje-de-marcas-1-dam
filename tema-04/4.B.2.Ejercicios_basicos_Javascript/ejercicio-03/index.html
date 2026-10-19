@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 3 - Día de la semana</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		main {
+			max-width: 42rem;
+			margin: 3rem auto;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		button {
+			padding: 0.85rem 1.2rem;
+			border: none;
+			border-radius: 0.7rem;
+			background: #2563eb;
+			color: #ffffff;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background: #1d4ed8;
+		}
+
+		#resultado {
+			margin-top: 1.5rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Día de la semana</h1>
+		<p>Pulsa el botón para comprobar si hoy es fin de semana usando el método <code>getDay()</code> del objeto <code>Date</code>.</p>
+		<button id="btn-comprobar" type="button" onclick="comprobarDia()">Comprobar día</button>
+		<div id="resultado">Todavía no se ha comprobado el día de hoy.</div>
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+
+	<script>
+		// Esta función se ejecuta al pulsar el botón.
+		function comprobarDia() {
+			// Creamos un objeto con la fecha actual.
+			let hoy = new Date();
+
+			// getDay() devuelve el día de la semana en número.
+			// Domingo es 0, lunes es 1, ... y sábado es 6.
+			let numeroDia = hoy.getDay();
+
+			// Si el número es 6 o 0, entonces hoy es fin de semana.
+			if (numeroDia === 6 || numeroDia === 0) {
+				document.getElementById("resultado").innerHTML = "Hoy es fin de semana";
+			} else {
+				// Si no es sábado ni domingo, entonces no es fin de semana.
+				document.getElementById("resultado").innerHTML = "Aún no es fin de semana";
+			}
+		}
+	</script>
+</body>
+</html>

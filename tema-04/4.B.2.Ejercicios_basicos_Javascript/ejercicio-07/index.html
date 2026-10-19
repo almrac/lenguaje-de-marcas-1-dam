@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 7 - Inversor de Strings</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		main {
+			max-width: 42rem;
+			margin: 3rem auto;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		button {
+			padding: 0.85rem 1.2rem;
+			border: none;
+			border-radius: 0.7rem;
+			background: #2563eb;
+			color: #ffffff;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background: #1d4ed8;
+		}
+
+		#resultado {
+			margin-top: 1.5rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Inversor de Strings</h1>
+		<p>Pulsa el botón para escribir una palabra y mostrarla letra por letra en orden inverso, desde el final hasta el principio, usando un bucle <code>for</code>.</p>
+		<button id="btn-invertir" type="button" onclick="invertirTexto()">Invertir palabra</button>
+		<div id="resultado">Todavía no se ha invertido ninguna palabra.</div>
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+
+	<script>
+		// Esta función se ejecuta al pulsar el botón.
+		function invertirTexto() {
+			// Pedimos al usuario una palabra.
+			let palabra = prompt("Introduce palabra para invertirla");
+
+			// Si el usuario pulsa "Cancelar", detenemos la función.
+			if (palabra === null) {
+				document.getElementById("resultado").innerHTML = "No ha introducido ninguna palabra";
+				return;
+			}
+
+			// Esta variable guardará la palabra invertida.
+			let invertida = "";
+
+			// Recorremos la palabra desde la última letra hasta la primera.
+			for (let i = palabra.length - 1; i >= 0; i--) {
+				invertida = invertida + palabra[i];
+			}
+
+			// Mostramos la palabra original y su versión invertida.
+			document.getElementById("resultado").innerHTML = "Tu palabra " + palabra + " invertida es " + invertida;
+		}
+	</script>
+</body>
+</html>

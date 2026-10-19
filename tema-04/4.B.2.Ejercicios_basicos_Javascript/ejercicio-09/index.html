@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 9 - Login con intentos</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		main {
+			max-width: 42rem;
+			margin: 3rem auto;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		.pista {
+			display: block;
+			width: fit-content;
+			margin-bottom: 1rem;
+			padding: 0.5rem 0.75rem;
+			border-radius: 999px;
+			background: #eff6ff;
+			border: 1px solid #bfdbfe;
+			color: #1e3a8a;
+			font-size: 0.95rem;
+		}
+
+		.pista code {
+			background: #dbeafe;
+			padding: 0.15rem 0.4rem;
+			border-radius: 0.4rem;
+			font-family: "Courier New", Courier, monospace;
+		}
+
+		button {
+			padding: 0.85rem 1.2rem;
+			border: none;
+			border-radius: 0.7rem;
+			background: #2563eb;
+			color: #ffffff;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background: #1d4ed8;
+		}
+
+		#resultado {
+			margin-top: 1.5rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Login con intentos</h1>
+		<p>Pulsa el botón para introducir una clave. El usuario solo tendrá 3 intentos y, si falla los tres, el programa se bloqueará.</p>
+		<div class="pista">Pista: clave de prueba <code>seguridad123</code></div>
+		<button id="btn-login" type="button" onclick="iniciarLogin()">Iniciar login</button>
+		<div id="resultado">Todavía no se ha realizado ningún intento de acceso.</div>
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+
+	<script>
+		// Esta función se ejecuta al pulsar el botón.
+		function iniciarLogin() {
+			// Guardamos la clave correcta en una variable fija.
+			const claveCorrecta = "seguridad123";
+
+			// El usuario tiene 3 intentos disponibles.
+			let intentos = 3;
+
+			// Pedimos la clave por primera vez.
+			let claveUsuario = prompt("Introduce la clave");
+
+			// Mientras la clave sea incorrecta y aún queden intentos, seguimos preguntando.
+			while (claveUsuario !== claveCorrecta && intentos > 1) {
+				// Restamos un intento por cada fallo.
+				intentos--;
+
+				// Avisamos al usuario de que la clave es incorrecta y cuántos intentos le quedan.
+				alert("Clave incorrecta. Te quedan " + intentos + " intentos")
+
+				// Volvemos a pedir la clave.
+				claveUsuario = prompt("Introduce la clave");
+			}
+
+			// Al salir del bucle, comprobamos si la clave final es correcta o no.
+			if (claveUsuario === claveCorrecta) {
+				alert("Acceso concedido");
+				document.getElementById("resultado").textContent = "Has conseguido acceder a tu cuenta";
+			} else {
+				alert("Has agotado todos los intentos. El programa se bloqueará.");
+				document.getElementById("resultado").textContent = "Acceso bloqueado.";
+			}
+		}
+	</script>
+</body>
+</html>

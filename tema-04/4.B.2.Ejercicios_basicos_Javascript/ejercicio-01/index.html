@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 1 - Lanzamiento de dados</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		main {
+			max-width: 42rem;
+			margin: 3rem auto;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		button {
+			padding: 0.85rem 1.2rem;
+			border: none;
+			border-radius: 0.7rem;
+			background: #2563eb;
+			color: #ffffff;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background: #1d4ed8;
+		}
+
+		#resultado {
+			margin-top: 1.5rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Lanzamiento de dados</h1>
+		<p>Pulsa el botón para lanzar dos dados aleatorios, sumar sus resultados y ver el resultado con <code>alert</code> y también en la página.</p>
+		<button id="btn-lanzar" type="button">Lanzar dados</button>
+		<div id="resultado">Todavía no se ha realizado ningún lanzamiento.</div>
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+
+	<script>
+		// Esta función genera un número entero del 1 al 6, como si lanzáramos un dado.
+		function lanzarDado() {
+			return Math.floor(Math.random() * 6) + 1;
+		}
+
+		// Esta función se ejecuta al pulsar el botón.
+		function jugar() {
+			// Pedimos al usuario que confirme si quiere realizar el lanzamiento.
+			let respuesta = prompt("Escribe SI para lanzar los dados:");
+
+			// Si pulsa "Cancelar", prompt devuelve null y detenemos el programa.
+			if (respuesta === null) {
+				alert("Has cancelado el ejercicio.");
+				return;
+			}
+
+			// Si escribe algo distinto de SI, no se lanzan los dados.
+			if (respuesta.toUpperCase() !== "SI") {
+				alert("No se realizó el lanzamiento porque no escribiste SI.");
+				return;
+			}
+
+			// Llamamos dos veces a la función para obtener el valor de cada dado.
+			let dado1 = lanzarDado();
+			let dado2 = lanzarDado();
+
+			// Sumamos ambos resultados.
+			let suma = dado1 + dado2;
+
+			// Preparamos un texto para mostrarlo en una ventana emergente.
+			let mensaje = "Dado 1: " + dado1 + "\nDado 2: " + dado2 + "\nSuma: " + suma;
+
+			// Mostramos el resultado con alert.
+			alert(mensaje);
+
+			// También escribimos el resultado dentro de la página.
+			document.getElementById("resultado").innerHTML =
+				"<strong>Resultado del lanzamiento:</strong><br>" +
+				"Dado 1: " + dado1 + "<br>" +
+				"Dado 2: " + dado2 + "<br>" +
+				"Suma: " + suma;
+		}
+
+		// Asociamos el botón con la función jugar para que se ejecute al hacer clic.
+		document.getElementById("btn-lanzar").addEventListener("click", jugar);
+	</script>
+</body>
+</html>

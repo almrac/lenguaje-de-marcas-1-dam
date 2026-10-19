@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 11 - Máximo de una lista</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		main {
+			max-width: 42rem;
+			margin: 3rem auto;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		button {
+			padding: 0.85rem 1.2rem;
+			border: none;
+			border-radius: 0.7rem;
+			background: #2563eb;
+			color: #ffffff;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background: #1d4ed8;
+		}
+
+		#resultado {
+			margin-top: 1.5rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Máximo de una lista</h1>
+		<p>Pulsa el botón para introducir 5 números, guardarlos en un array y encontrar cuál es el mayor.</p>
+		<button id="btn-maximo" type="button" onclick="buscarMaximo()">Buscar máximo</button>
+		<div id="resultado">Todavía no se ha calculado el número mayor.</div>
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+
+	<script>
+		// Esta función se ejecuta al pulsar el botón.
+		function buscarMaximo() {
+			// Creamos un array vacío donde guardaremos los 5 números.
+			let numeros = [];
+
+
+			// Pedimos 5 números al usuario y los guardamos en el array.
+			for (let i = 0; i < 5; i++) {
+				let numero = Number(prompt(`Introduce el número`));
+				numeros.push(numero);
+			}
+
+			// Tomamos el primer número como mayor provisional.
+			let mayor = numeros[0];
+
+			// Recorremos el resto del array para comprobar si encontramos un número mayor.
+			for (let i = 1; i < numeros.length; i++) {
+				if (numeros[i] > mayor) {
+					mayor = numeros[i];
+				}
+			}
+
+			// Hacemos una copia del array original con ... para no modificarlo.
+			// Después lo ordenamos de menor a mayor.
+			let ascendente = [...numeros].sort(function(a, b) {
+				return a - b;
+			});
+
+			// Creamos otra copia y la ordenamos de mayor a menor.
+			let descendente = [...numeros].sort(function(a, b) {
+				return b - a;
+			});
+
+			// Mostramos la lista introducida, el valor mayor y la ordenación extra.
+			document.getElementById("resultado").innerHTML =
+					"El número mayor de la secuencia: " + numeros.join(", ") + " es: " + mayor + "<br>" +
+					"El orden ascendente es: " + ascendente.join(", ") + "<br>" +
+					"El orden descendente es: " + descendente.join(", ");
+		}
+	</script>
+</body>
+</html>
