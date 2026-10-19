@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>1. Objetos y clases en JavaScript</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
+
+		main {
+			width: 100%;
+			max-width: 42rem;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>1. Objetos y clases en JavaScript</h1>
+		<p>Este ejercicio ejecuta ejemplos con objetos literales y clases en JavaScript. Al cargar la página se mostrarán mensajes con <code>alert</code>.</p>
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+
+	<script>
+		// Definimos una clase (plantilla) para crear objetos Alumno.
+		class Alumno {
+			// El constructor se ejecuta al hacer "new Alumno(...)"
+			// y guarda los datos recibidos dentro del objeto.
+			constructor(nombre, apellidos, edad, calle, numero, poblacion) {
+				this.nombre = nombre;
+				this.apellidos = apellidos;
+				this.edad = edad;
+				// Guardamos la direccion como un objeto anidado.
+				this.domicilio = {
+					calle: calle,
+					numero: numero,
+					poblacion: poblacion
+				};
+			}
+			// Metodo de la clase para mostrar un saludo con datos del alumno.
+			saludar() {
+				alert("Hola me llamo " + this.nombre + " " + this.apellidos + " y vivo en " + this.domicilio.calle + " " + this.domicilio.numero + " de " + this.domicilio.poblacion);
+			}
+		}
+
+		// Creamos dos instancias de la clase Alumno.
+		let pepe = new Alumno("Pepe", "López", "23", "Norte", 3, "Alcázar");
+		// En esta instancia faltan datos de domicilio; quedaran como undefined.
+		let maria = new Alumno("María", "González", "23");
+
+		// Llamamos al metodo saludar de cada objeto.
+		pepe.saludar();
+		maria.saludar();
+
+		// Objeto literal: se crea directamente sin usar class.
+		let alumno1 = {
+			nombre: "Carlos",
+			apellidos: "Navarro",
+			edad: 21,
+			domicilio: {
+				calle: "Norte",
+				numero: "22",
+				poblacion: "Alcázar"
+			},
+			// Metodo dentro del objeto literal.
+			saludar: function() {
+				alert("Hola, me llamo " + this.nombre + " " + this.apellidos);
+			}
+		};
+		// Segundo objeto literal con la misma estructura.
+		let alumno2 = {
+			nombre: "María",
+			apellidos: "Pérez",
+			edad: 21,
+			domicilio: {
+				calle: "mediodía",
+				numero: "26",
+				poblacion: "Villafranca de los Caballeros"
+			},
+			saludar: function() {
+				alert("Hola, me llamo " + this.nombre + " " + this.apellidos);
+			}
+		};
+
+		// Ejecutamos los metodos de ambos objetos literales.
+		alumno1.saludar();
+		alumno2.saludar();
+	</script>
+</body>
+</html>

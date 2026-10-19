@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>6. Lo básico de JSON</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
+
+		main {
+			width: 100%;
+			max-width: 80dvw;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		#display {
+			margin-top: 1rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
+		}
+
+		.bloque-conversion {
+			background: #ffffff;
+			border: 1px solid #cbd5e1;
+			border-radius: 0.75rem;
+			padding: 0.75rem;
+		}
+
+		.bloque-conversion h2 {
+			margin: 0 0 0.5rem 0;
+			font-size: 1rem;
+		}
+
+		.bloque-conversion textarea {
+			width: 100%;
+			min-height: 70dvh;
+			resize: vertical;
+			box-sizing: border-box;
+			border: 1px solid #cbd5e1;
+			border-radius: 0.5rem;
+			padding: 0.65rem;
+			font-family: Consolas, "Courier New", monospace;
+			font-size: 0.95rem;
+		}
+
+		#xml {
+			background: #f1f5f9;
+			color: #475569;
+		}
+
+		@media (max-width: 800px) {
+			#display {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>6. Pasar de XML a JSON</h1>
+		<p>En este ejercicio, se muestra un bloque de código XML y su equivalente en JSON. El objetivo es comparar ambos formatos y entender cómo se representan los mismos datos de manera diferente.</p>
+			<div id="display">
+				<div class="bloque-conversion">
+					<h2>XML</h2>
+					<textarea id="xml" readonly></textarea>
+				</div>
+				<div class="bloque-conversion">
+					<h2>JSON</h2>
+					<textarea id="json"></textarea>
+				</div>
+			</div>
+			<a class="volver" href="../index.html">Volver al índice</a>
+		</main>
+
+		<script id="xml-source" type="text/plain"><?xml version="1.0" encoding="UTF-8"?>
+<concesionario codigo="c01">
+    <datos_propietario id="1">
+        <nombre>Andrés Gutiérrez González</nombre>
+        <direccion>Norte, 8</direccion>
+        <poblacion>Alcázar de San Juan</poblacion>
+    </datos_propietario>
+    <distribuidor_de>
+        <marca>Renault</marca>
+        <marca>Seat</marca>
+        <marca>Kia</marca>
+    </distribuidor_de>
+    <vehiculos>
+        <vehiculo>
+            <marca>Seat</marca>
+            <modelo>Ibiza</modelo>
+            <combustible>Gasolina</combustible>
+            <precio>14000</precio>
+        </vehiculo>
+        <vehiculo>
+            <marca>Kia</marca>
+            <modelo>Ceed</modelo>
+            <combustible>Diesel</combustible>
+            <precio>16000</precio>
+        </vehiculo>
+        <vehiculo>
+            <marca>Renaut</marca>
+            <modelo>Clio</modelo>
+            <combustible>Diesel</combustible>
+            <precio>18000</precio>
+        </vehiculo>
+    </vehiculos>
+</concesionario></script>
+
+		<script id="json-source" type="text/plain">{
+    {
+        "codigo": "c01",
+        "datos_propietario": {
+            "id": "1",
+            "nombre": "Andrés Gutiérrez González",
+            "direccion": "Norte, 8",
+            "poblacion": "Alcázar de San Juan"
+        },
+        "distribuidor_de": [
+            {"marca": "Renault"},
+            {"marca": "Seat"},
+            {"marca": "Kia"}
+        ],
+        "vehiculos": [
+            {
+                "marca": "Seat",
+                "modelo": "Ibiza",
+                "combustible": "Gasolina",
+                "precio": 14000
+            },
+            {
+                "marca": "Kia",
+                "modelo": "Ceed",
+                "combustible": "Diesel",
+                "precio": 16000
+            },
+            {
+                "marca": "Renaut",
+                "modelo": "Clio",
+                "combustible": "Diesel",
+                "precio": 18000
+            }
+        ]
+    }
+}</script>
+
+		<script>
+			const xmlTextarea = document.getElementById("xml");
+			const jsonTextarea = document.getElementById("json");
+			const xmlSource = document.getElementById("xml-source");
+			const jsonSource = document.getElementById("json-source");
+
+			xmlTextarea.value = xmlSource.textContent.trim();
+			jsonTextarea.value = jsonSource.textContent.trim();
+		</script>
+	</body>
+</html>

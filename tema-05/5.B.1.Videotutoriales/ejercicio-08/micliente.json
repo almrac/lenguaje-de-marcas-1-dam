@@ -1,0 +1,13 @@
+{
+  "nombre": "Pepe",
+  "apellidos": "López Aguirre",
+  "edad": 56,
+  "suscrito": true,
+  "aficiones": ["leer", "nadar", "paddle"],
+  "direccion": {
+    "calle": "Norte",
+    "numero": "23B",
+    "poblacion": "Alcázar de San Juan"
+
+  }
+}

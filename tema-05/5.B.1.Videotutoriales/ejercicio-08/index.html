@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>7. Pasar de XML a JSON</title>
+		<style>
+			/* Base visual común: centrado, tipografía y fondo degradado. */
+			body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
+
+		main {
+			width: 100%;
+			max-width: 42rem;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+				/* Contenedor donde se muestra el formulario de datos JSON. */
+				#display {
+				margin-top: 1rem;
+				padding: 1rem;
+				border-radius: 0.75rem;
+				background: #f8fafc;
+				border: 1px solid #cbd5e1;
+			}
+
+				/* Organización vertical y separación uniforme entre filas. */
+				#display form {
+				display: grid;
+				gap: 0.75rem;
+				margin: 0;
+			}
+
+			#display form p {
+				margin: 0;
+			}
+
+				/* Cada label actúa como fila: texto + campo en línea. */
+				#display label {
+				display: flex;
+				align-items: center;
+				gap: 0.6rem;
+				font-weight: 600;
+				color: #1e293b;
+			}
+
+				/* Ancho fijo de los títulos para alinear todos los inputs. */
+				#display .campo-label {
+				width: 5.5rem;
+				flex-shrink: 0;
+			}
+
+				/* El input ocupa el espacio restante de su fila. */
+				#display input[type="text"] {
+				flex: 1;
+				padding: 0.55rem 0.65rem;
+				border: 1px solid #cbd5e1;
+				border-radius: 0.5rem;
+				background: #ffffff;
+				color: #0f172a;
+				font-size: 0.95rem;
+			}
+
+				/* Realce del foco para mejorar usabilidad al escribir. */
+				#display input[type="text"]:focus {
+				outline: 2px solid #93c5fd;
+				outline-offset: 1px;
+				border-color: #60a5fa;
+			}
+
+				/* Tamaño y color del checkbox acorde al tema. */
+				#display input[type="checkbox"] {
+				width: 1rem;
+				height: 1rem;
+				accent-color: #2563eb;
+			}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>7. Consumir un JSON con JavaScript #2</h1>
+		<p>En este ejercicio, vamos a cargar un archivo JSON local con JavaScript y mostrar su contenido en un formulario HTML. El JSON contiene información de un cliente, y cada campo del formulario se rellenará automáticamente con los datos correspondientes.</p>
+				<!-- Formulario que se rellenará automáticamente desde micliente.json -->
+				<div id="display">
+				<form action="">
+						<p><label for="nombre"><span class="campo-label">Nombre:</span><input type="text" name="nombre" id="nombre"></label></p>
+						<p><label for="apellidos"><span class="campo-label">Apellidos:</span><input type="text" name="apellidos" id="apellidos"></label></p>
+						<p><label for="edad"><span class="campo-label">Edad:</span><input type="text" name="edad" id="edad"></label></p>
+						<p><label for="calle"><span class="campo-label">Calle:</span><input type="text" name="calle" id="calle"></label></p>
+						<p><label for="aficiones"><span class="campo-label">Aficiones:</span><input type="text" name="aficiones" id="aficiones"></label></p>
+					<p><label for="suscrito">Suscrito: <input type="checkbox" name="suscrito" id="suscrito"></label></p>
+				</form>
+			</div>
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+		<script>
+			// Carga del JSON local y conversión de la respuesta a objeto JS.
+			fetch('micliente.json')
+					.then(response => response.json())
+					.then(cliente => {
+						// Mapeo directo de propiedades simples a campos del formulario.
+						document.getElementById('nombre').value = cliente.nombre;
+						document.getElementById('apellidos').value = cliente.apellidos;
+						document.getElementById('edad').value = cliente.edad;
+						document.getElementById('calle').value = cliente.direccion.calle;
+
+						// Conversión del array de aficiones a texto separado por comas.
+						for ( i=0; i<cliente.aficiones.length; i++){
+							if (i === cliente.aficiones.length -1){
+								document.getElementById('aficiones').value += cliente.aficiones[i];
+						}else{
+							document.getElementById('aficiones').value += cliente.aficiones[i] + ', ';
+						}
+
+					}
+						// Marcamos el checkbox si el cliente está suscrito.
+						if (cliente.suscrito){
+							document.getElementById('suscrito').checked = true;
+						}
+					});
+
+	</script>
+</body>
+</html>

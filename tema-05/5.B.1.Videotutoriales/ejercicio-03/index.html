@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3. Creación de elementos de lista con JS</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
+
+		main {
+			width: 100%;
+			max-width: 42rem;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		#display {
+			margin-top: 1rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+		}
+		button {
+			padding: 0.85rem 1.2rem;
+			border: none;
+			border-radius: 0.7rem;
+			background: #2563eb;
+			color: #ffffff;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background: #1d4ed8;
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>3. Creación de elementos de lista con JS</h1>
+		<p>Lista jugadores R.Madríd</p>
+		<button id="cargarlista" type="button" >Cargar lista de Jugadores</button>
+		<div id="display">
+			<ol id="lista-jugadores">
+
+			</ol>
+		</div>
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+	<script>
+		// Asociamos el click del boton con la funcion que carga la lista.
+		document.getElementById("cargarlista").addEventListener("click", cargarLista);
+
+		// Esta funcion genera dinamicamente los <li> de jugadores.
+		function cargarLista(){
+			// Vaciamos la lista para no duplicar elementos en cada click.
+			document.getElementById("lista-jugadores").innerHTML="";
+
+			// Array con los datos que queremos mostrar.
+			let jugadores = ["Mbappé", "Butragueño", "Raúl", "Zidane", "Ronaldo"]
+
+			// Recorremos el array para crear un <li> por jugador.
+			for (let i=0; i<jugadores.length; i++){
+				// Creamos un nuevo nodo de tipo <li>.
+				let nuevoLi = document.createElement("li");
+				// Aplicamos estilos en linea a cada elemento creado.
+				nuevoLi.setAttribute("style", "padding: 0.5rem; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 0.75rem; margin-bottom: 0.5rem;");
+				// Insertamos el nombre del jugador en el <li>.
+				nuevoLi.innerHTML = jugadores[i];
+				// Anadimos el <li> al <ol id="lista-jugadores">.
+				document.getElementById("lista-jugadores").appendChild(nuevoLi);
+
+			}
+		}
+
+	</script>
+</body>
+</html>
