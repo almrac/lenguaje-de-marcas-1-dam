@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 1 - Pedido</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main>
+		<h1>Pedido</h1>
+		<p>Selecciona un producto, revisa la imagen asociada e introduce los datos del usuario. La validacion la construiremos despues con JavaScript.</p>
+
+		<form id="formulario-pedido" class="formulario" novalidate>
+			<div class="campo">
+				<label for="producto">Producto:</label>
+				<select id="producto" name="producto">
+					<option value="">Elija producto</option>
+					<option value="ordenador">Ordenador</option>
+					<option value="portatil">Portatil</option>
+					<option value="tablet">Tablet</option>
+				</select>
+			</div>
+
+			<div class="campo campo-imagen">
+				<span class="etiqueta-imagen">Vista previa del producto</span>
+				<img
+					id="imagen-producto"
+					class="imagen-producto"
+					src="assets/sin-producto.svg"
+					alt="Imagen del producto seleccionado"
+					width="200"
+					height="200">
+			</div>
+
+			<div class="campo">
+				<label for="usuario">Usuario</label>
+				<input id="usuario" name="usuario" type="text" placeholder="Minimo 5 caracteres">
+			</div>
+
+			<div class="campo campo-checkbox">
+				<label class="checkbox-linea" for="condiciones">
+					<input id="condiciones" name="condiciones" type="checkbox">
+					<span>He leido y acepto las condiciones</span>
+				</label>
+			</div>
+
+			<div class="acciones">
+				<button id="btn-enviar" type="submit">Enviar pedido</button>
+			</div>
+		</form>
+
+		<h3 id="mensaje-estado" class="mensaje-estado">Los mensajes del estado del pedido aparecerán aquí.</h3>
+
+		<a class="volver" href="../index.html">Volver al indice</a>
+	</main>
+
+	<script src="app.js"></script>
+</body>
+</html>

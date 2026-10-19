@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 2 - Solicitud de prestamos</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main>
+		<h1>Solicitud de prestamos</h1>
+		<p>Base del ejercicio para validar una solicitud de prestamo. Dejamos preparada la interfaz para centrarnos despues en la logica.</p>
+
+		<form id="formulario-prestamo" class="formulario" novalidate>
+			<div class="campo">
+				<label for="solicitante">Nombre y apellidos</label>
+				<input id="solicitante" name="solicitante" type="text" placeholder="Escribe tu nombre completo">
+			</div>
+
+			<div class="campo">
+				<label for="edad">Edad</label>
+				<input id="edad" name="edad" type="number" min="18" placeholder="Ejemplo: 30">
+			</div>
+
+			<div class="campo">
+				<label for="ingresos">Ingresos mensuales</label>
+				<input id="ingresos" name="ingresos" type="number" min="0" step="0.01" placeholder="Ejemplo: 1800">
+			</div>
+
+			<div class="campo">
+				<label for="cantidad">Cantidad solicitada</label>
+				<input id="cantidad" name="cantidad" type="number" min="0" step="0.01" placeholder="Ejemplo: 5000">
+			</div>
+
+			<div class="acciones">
+				<button id="btn-revisar" type="button">Revisar solicitud</button>
+			</div>
+		</form>
+
+		<section id="resultado" class="resultado">
+			Aqui mostraremos el resultado de la validacion cuando construyamos el JavaScript.
+		</section>
+
+		<a class="volver" href="../index.html">Volver al indice</a>
+	</main>
+
+	<script src="app.js"></script>
+</body>
+</html>
