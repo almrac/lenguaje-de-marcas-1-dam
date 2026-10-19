@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!--
+		Proyecto: Real Madrid con JSON
+		Ejercicio 2:
+		- Lee un archivo JSON mediante fetch().
+		- Convierte el contenido a un array de objetos JavaScript.
+		- Genera dinámicamente una tarjeta <div> por cada jugador.
+	-->
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Ejercicio 2 - Tarjetas de jugadores del Real Madrid con JSON</title>
+	<style>
+		/* Estilos base de la página. */
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
+
+		/* Superficie principal donde se muestra el ejercicio. */
+		main {
+			width: 100%;
+			max-width: 42rem;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		/* Contenedor flexible que alojará todas las tarjetas creadas con JavaScript. */
+		#contenedor {
+			margin-top: 1rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 1rem;
+			justify-content: space-between;
+		}
+
+		/* Estilo de cada tarjeta individual. */
+		.tarjeta-jugador {
+			padding: 0.75rem;
+			margin-bottom: 0.75rem;
+			border: 1px solid #cbd5e1;
+			border-radius: 0.75rem;
+			background: #fff;
+			max-width: 44%;
+		}
+
+		/* Imagen asociada al jugador dentro de cada tarjeta. */
+		.foto-jugador {
+			width: 100%;
+			max-width: 100%;
+			aspect-ratio: 3 / 4;
+			object-fit: cover;
+			border-radius: 0.6rem;
+			border: 1px solid #cbd5e1;
+			display: block;
+			margin-bottom: 0.6rem;
+		}
+
+		/* Enlace de vuelta al índice principal. */
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Ejercicio 2: tarjetas de jugadores del Real Madrid con JSON</h1>
+		<p>Este ejemplo carga los datos desde JSON y construye una tarjeta HTML completa para cada jugador.</p>
+		<!-- Este contenedor empieza vacío y se rellena después del fetch. -->
+		<div id="contenedor"></div>
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+	<script>
+		/*
+			Flujo del ejercicio:
+			1. Pedimos el archivo jugadores.json.
+			2. Convertimos la respuesta a objetos JavaScript con response.json().
+			3. Dentro del segundo .then(...) construimos todos los elementos HTML.
+			4. Si algo falla, el bloque catch informa del error.
+		*/
+		fetch("jugadores.json")
+			.then(function(respuesta) {
+				return respuesta.json();
+			})
+			.then(function(jugadores) {
+				// Recorremos el array de objetos y creamos una tarjeta por cada jugador.
+				for (let i = 0; i < jugadores.length; i++) {
+					// Guardamos en una variable el jugador que estamos procesando.
+					let jugador = jugadores[i];
+
+					// Separamos las propiedades en variables para hacer el código más legible.
+					let nombreJugador = jugador.nombre;
+					let edadJugador = jugador.edad;
+					let fichaJugador = jugador.ficha;
+
+					// Creamos en memoria la estructura base de la tarjeta.
+					let nuevaTarjeta = document.createElement("div");
+					nuevaTarjeta.classList.add("tarjeta-jugador");
+					let tituloJugador = document.createElement("h2");
+
+					// Mostramos la edad del jugador.
+					let tituloEdad = document.createElement("h4");
+					tituloEdad.innerHTML = "Edad: " + edadJugador;
+
+					// Mostramos el valor de su ficha.
+					let tituloFicha = document.createElement("h4");
+					tituloFicha.innerHTML = "Ficha: " + fichaJugador;
+
+					// Insertamos el nombre del jugador en el encabezado principal de la tarjeta.
+					tituloJugador.innerHTML = nombreJugador;
+
+					// Creamos la imagen del jugador y configuramos sus atributos.
+					let nuevaFoto = document.createElement("img");
+					nuevaFoto.src = "imagenes/" + jugador.foto;
+					nuevaFoto.alt = "Foto de " + nombreJugador;
+					nuevaFoto.classList.add("foto-jugador");
+
+					// Añadimos todos los nodos a la tarjeta y, después, la tarjeta al contenedor.
+					nuevaTarjeta.appendChild(nuevaFoto);
+					nuevaTarjeta.appendChild(tituloJugador);
+					nuevaTarjeta.appendChild(tituloEdad);
+					nuevaTarjeta.appendChild(tituloFicha);
+					document.getElementById("contenedor").appendChild(nuevaTarjeta);
+				}
+			})
+			.catch(function(error) {
+				// Si no se puede leer el JSON o hay cualquier otro fallo, quedará reflejado aquí.
+				console.error("Error al cargar jugadores.json:", error);
+			});
+	</script>
+</body>
+</html>
