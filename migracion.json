@@ -1,0 +1,162 @@
+[
+  {
+    "repositorio": "almrac/1.B.1-Paginas-Videotutoriales",
+    "carpeta": "tema-01/1.B.1-Paginas-Videotutoriales",
+    "commit_original": "c52707fc7c4c2c295b8e0f7fa7e5570ef286d636",
+    "tree_original": "815d1be10c8d9daadbe91e9108b8378cec79c3fb",
+    "refs_originales": [
+      "refs/heads/main c52707fc7c4c2c295b8e0f7fa7e5570ef286d636"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/1.B.3-Pagina-we-de-tu-hotel",
+    "carpeta": "tema-01/1.B.3-Pagina-we-de-tu-hotel",
+    "commit_original": "0bdfbdcd6146dda5c5a340d15b96ca3f6525bdb8",
+    "tree_original": "6cefeeb8ed621b0a63d69959cb48ec8b634fd30e",
+    "refs_originales": [
+      "refs/heads/main 0bdfbdcd6146dda5c5a340d15b96ca3f6525bdb8"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/2.b.1-paginas-videotutoriales",
+    "carpeta": "tema-02/2.b.1-paginas-videotutoriales",
+    "commit_original": "d61cf8590ee998ffc9923fa24ae10250422f867a",
+    "tree_original": "bcab29d97121662197a42c39c7eecc806c05f5a3",
+    "refs_originales": [
+      "refs/heads/main d61cf8590ee998ffc9923fa24ae10250422f867a"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/2.B.3-pagina-de-una-tienda",
+    "carpeta": "tema-02/2.B.3-pagina-de-una-tienda",
+    "commit_original": "9b6ae4b687496c21295d72063fd7f2c93a4c0ae2",
+    "tree_original": "de66e047b00433c0810b57c0d5d6303ce75a8f08",
+    "refs_originales": [
+      "refs/heads/main 9b6ae4b687496c21295d72063fd7f2c93a4c0ae2"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/3.B.1-Videotutoriales",
+    "carpeta": "tema-03/3.B.1-Videotutoriales",
+    "commit_original": "480cd4bfbbadb6c60b7401fb04ca82e943b51571",
+    "tree_original": "b43edce994e4607bdf5bde7078e0665e1eb0c190",
+    "refs_originales": [
+      "refs/heads/main 480cd4bfbbadb6c60b7401fb04ca82e943b51571"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/3.B.3-sitio-web-de-una-pagina",
+    "carpeta": "tema-03/3.B.3-sitio-web-de-una-pagina",
+    "commit_original": "7780922ae275fd98930b1a3be16f308ff1468008",
+    "tree_original": "cd715e09915a237688c30798d1492ef7f18d963d",
+    "refs_originales": [
+      "refs/heads/main 7780922ae275fd98930b1a3be16f308ff1468008"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/4.B.1.Videotutoriales",
+    "carpeta": "tema-04/4.B.1.Videotutoriales",
+    "commit_original": "d34319c3f1fbc6b601c13f37d6b2cd92d85bb4d9",
+    "tree_original": "699cdf99098a185271ca89e9dee517cba9801f35",
+    "refs_originales": [
+      "refs/heads/main d34319c3f1fbc6b601c13f37d6b2cd92d85bb4d9"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/4.B.2.Ejercicios_basicos_Javascript",
+    "carpeta": "tema-04/4.B.2.Ejercicios_basicos_Javascript",
+    "commit_original": "b8cf3338230246d86a95a52bcd7c7cc75cb1a44f",
+    "tree_original": "fc960c6b340d0ec0fdbe6144c7939f6286ccaf36",
+    "refs_originales": [
+      "refs/heads/main b8cf3338230246d86a95a52bcd7c7cc75cb1a44f"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/4.B.3.Ticket_de_compra",
+    "carpeta": "tema-04/4.B.3.Ticket_de_compra",
+    "commit_original": "4875c4c2ecc3c1a4b4848fa4d26b936bace71f83",
+    "tree_original": "b2dff34cc9ef84dc11bc710733eb2f86f54a51e6",
+    "refs_originales": [
+      "refs/heads/main 4875c4c2ecc3c1a4b4848fa4d26b936bace71f83"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/4.B.5.Validacion_de_formularios",
+    "carpeta": "tema-04/4.B.5.Validacion_de_formularios",
+    "commit_original": "d19cdee766790ba5295ff782a7c8fa968823de5f",
+    "tree_original": "f67bf75841f1be97f13b347ead15e4222b052b9e",
+    "refs_originales": [
+      "refs/heads/main d19cdee766790ba5295ff782a7c8fa968823de5f"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/5.B.1.Videotutoriales",
+    "carpeta": "tema-05/5.B.1.Videotutoriales",
+    "commit_original": "95157274f4fcb477da9bd0e93817b97898a5f599",
+    "tree_original": "58b5ce2ac660e45cd1af637c0489d36d0075843a",
+    "refs_originales": [
+      "refs/heads/main 95157274f4fcb477da9bd0e93817b97898a5f599"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/5.B.2.JSON_a_partir_de_enunciado",
+    "carpeta": "tema-05/5.B.2.JSON_a_partir_de_enunciado",
+    "commit_original": "599d476824e5ad027f39ce5e110974a4b03470c5",
+    "tree_original": "a453528e130c5f68b1deade9463590cdbcdb18cc",
+    "refs_originales": [
+      "refs/heads/main 599d476824e5ad027f39ce5e110974a4b03470c5"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/5.B.3.Consumir_JSON",
+    "carpeta": "tema-05/5.B.3.Consumir_JSON",
+    "commit_original": "1f198e817565bf2ed1580abac65fc27140ac1fd9",
+    "tree_original": "5a805ba4e5e22fc987f807fd902c6016f4a456f5",
+    "refs_originales": [
+      "refs/heads/main 1f198e817565bf2ed1580abac65fc27140ac1fd9"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/5.B.4.Consumir_JSON_createElement",
+    "carpeta": "tema-05/5.B.4.Consumir_JSON_createElement",
+    "commit_original": "ffdda06a19b9440889c6eee2a689caa4280d9ff9",
+    "tree_original": "199ecc6a089d7400480f72ef3a26e400acf8877f",
+    "refs_originales": [
+      "refs/heads/main ffdda06a19b9440889c6eee2a689caa4280d9ff9"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/5.B.7.Ejercicio_real_madrid_con_JSON",
+    "carpeta": "tema-05/5.B.7.Ejercicio_real_madrid_con_JSON",
+    "commit_original": "3637c5b37b24c0fe26bcaecde583a397c2dc3d54",
+    "tree_original": "436a0a0cc0c50ee236a2499ad4bfa52c5575f3ca",
+    "refs_originales": [
+      "refs/heads/main 3637c5b37b24c0fe26bcaecde583a397c2dc3d54"
+    ],
+    "github_pages_activado": true
+  },
+  {
+    "repositorio": "almrac/6.A.1.Videotutoriales_XML",
+    "carpeta": "tema-06/6.A.1.Videotutoriales_XML",
+    "commit_original": "1b453de56789d44a67e5a34235a52f4bdf7b6c08",
+    "tree_original": "cc890a4d25400ca6f90b8d77d0f2c4f833b0722a",
+    "refs_originales": [
+      "refs/heads/main 1b453de56789d44a67e5a34235a52f4bdf7b6c08"
+    ],
+    "github_pages_activado": true
+  }
+]
