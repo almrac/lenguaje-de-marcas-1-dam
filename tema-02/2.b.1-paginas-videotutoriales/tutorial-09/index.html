@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>CSS en tablas</title>
+	<style>
+		h1{
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+		}
+		table,td,th{
+			border: 2px solid blue;
+			border-collapse: collapse;
+		}
+		table{
+			width: 50%;
+			margin: auto;
+		}
+		tr{
+			height: 80px;
+		}
+		td{
+			vertical-align: center;
+			text-align: center;
+		}
+		tr:hover{
+			background-color: grey;
+		}
+		tr:nth-child(even){
+			background-color: aqua;
+		}
+	</style>
+</head>
+<body>
+	<h1>CSS en tablas</h1>
+	<table>
+		<tr>
+			<th>Artículo</th>
+			<th>Precio</th>
+		</tr>
+		<tr>
+			<td>Aceite de Oliva</td>
+			<td>10.00</td>
+		</tr>
+		<tr>
+			<td>Tortas de Alcázar</td>
+			<td>6.50</td>
+		</tr>
+		<tr>
+			<td>Miguelitos de la Roda</td>
+			<td>12.00</td>
+		</tr>
+	</table>
+</body>
+</html>
