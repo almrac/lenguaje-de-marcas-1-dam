@@ -1,0 +1,33 @@
+{
+  "pedido": {
+    "numero_pedido": "PED-2026-001",
+    "fecha": "2026-04-14",
+    "hora": "18:35:20",
+    "usuario": {
+      "nombre_usuario": "mlopez",
+      "nombre_completo": "Marta Lopez Ruiz",
+      "direccion_envio": {
+        "calle": "Avenida del Sol, 18",
+        "poblacion": "Sevilla",
+        "codigo_postal": "41008"
+      }
+    },
+    "articulos": [
+      {
+        "codigo_articulo": "A100",
+        "descripcion": "Teclado mecanico",
+        "precio": 59.95
+      },
+      {
+        "codigo_articulo": "A205",
+        "descripcion": "Raton inalambrico",
+        "precio": 24.5
+      },
+      {
+        "codigo_articulo": "A310",
+        "descripcion": "Alfombrilla XL",
+        "precio": 14.99
+      }
+    ]
+  }
+}
