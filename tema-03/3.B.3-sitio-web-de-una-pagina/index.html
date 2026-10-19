@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>hecco - decoración en madera</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Arial', Sans-Serif, serif;
+			line-height: 1.6;
+			color: #333;
+		}
+
+
+		/* CABECERA / HERO */
+		#cabecera {
+			position: relative;
+			height: 500px;
+			background-image: url('assets/images/hecco-decoracion-en-madera-pura-vida.jpg');
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			color: white;
+		}
+
+		#cabecera::after {
+			/*Hola Jose Luis, se que no hemos visto los pseudoelementos aún, uso este after para hacer un velado que
+			facilitaría la lectura de texto en imágenes muy claras. Se que no hemos visto este punto aún (ni siquiera se
+			si esta previsto en el temario, pero me gusta mas que la sombra de los textos para mejorar la legilibidad*/
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+
+		#cabecera h1 {
+			font-size: 2.5em;
+			line-height: 1.2;
+			margin-bottom: 0;
+			text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+			/*He puesto el z-index, aunque no lo hemos visto, para que el titulo no quede por debajo del pseudelemento*/
+			z-index:1;
+
+		}
+
+		#cabecera .subtitulo {
+			font-size: 1.5em;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+			z-index: 1;
+		}
+
+		/* MENÚ */
+		#menu-principal {
+			background-color: #14443a;
+			padding: 0;
+		}
+
+		#menu-principal .contenedor-menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		#menu-principal nav {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+		}
+
+		#menu-principal nav a {
+			flex: 1;
+			padding: 20px;
+			text-align: center;
+			color: white;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		#menu-principal nav a:hover {
+			background-color: #0b2c25;;
+		}
+
+		/* SECCIÓN QUIENES SOMOS */
+		#seccion-quienes-somos {
+			background-color: #f8f9fa;
+			padding: 60px 24px;
+		}
+
+		.titulo-seccion {
+			font-size: 2.5em;
+			line-height: 1.2;
+			margin-bottom: 40px;
+			text-align: center;
+			color: #14443a;
+		}
+
+		#seccion-quienes-somos .contenedor-quienes-somos {
+			display: flex;
+			flex-direction: column;
+
+
+		}
+
+		#seccion-quienes-somos .fila {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: start;
+			/*Se que esta propiedad aún no la hemos visto, pero gap, aplica una separación entre elementos hijos de un
+			elemento flex. Esta soportado por todos los navegadores excepto IE11, y da menos problemas en la maquetación
+			que poner tamaños porcentuales o absolutos y tratar las separaciones con margins o paddings.
+			Puedes comprobar el despliegue actual de la propiedad en los navegadores en esta web caniuse.com*/
+			gap: 48px;
+			width: 100%;
+		}
+
+		#seccion-quienes-somos .columna-imagen {
+			flex: 1;
+			/* Hola Jose Luís, un apunte aqui:
+			Tanto aquí podría usar la propiedad del 50% y poner lo mismo en .columna-texto, pero al ser hijo de un
+			componente flex, considero mas apropiado usar las propiedades css mas acordes a esta propiedad del padre que
+			separar los bloques por porcentaje o un tamaño absoluto*/
+		}
+
+		#seccion-quienes-somos .columna-imagen img {
+			width: 100%;
+			height: auto;
+			display: block;
+			transition: opacity 0.3s ease;
+			box-shadow: 0 11px 44px rgba(0, 0, 0, 0.2);
+			border-radius: 16px;
+		}
+
+
+		#seccion-quienes-somos .columna-texto {
+			flex: 1;
+		}
+
+		#seccion-quienes-somos .columna-texto p {
+			margin-bottom: 20px;
+		}
+
+		#seccion-quienes-somos .columna-texto h3 {
+			font-size: 1.8em;
+			margin-bottom: 20px;
+			color: #14443a;
+		}
+
+		#seccion-quienes-somos .columna-texto p {
+			font-size: 1.1em;
+			line-height: 1.8;
+			color: #555;
+		}
+
+		/* SECCIÓN OPINIONES */
+		#seccion-opiniones {
+			padding: 60px 24px;
+			background-color: white;
+		}
+
+
+		#seccion-opiniones .fila-opiniones {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: stretch;
+			flex-wrap: wrap;
+			gap: 48px;
+		}
+
+		.opinion {
+			flex: 1;
+			max-width: 100%;
+			text-align: center;
+		}
+
+		.imagen-redonda {
+			box-shadow: 0 11px 44px rgba(0, 0, 0, 0.1);
+			max-width: 320px;
+			height: auto;
+			border-radius: 50%;
+			overflow: hidden;
+			margin: 0 auto 20px;
+		}
+
+		.imagen-redonda img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+
+		.opinion p {
+			font-style: italic;
+			font-size: 1.6em;
+			color: #555;
+			line-height: 1.6;
+		}
+
+		/* FOOTER */
+		#pie-pagina {
+			background-color: #0b2c25;
+			color: white;
+			padding: 60px 24px;
+		}
+
+		#pie-pagina .contenedor-pie-pagina {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 30px;
+
+		}
+
+		#pie-pagina .columna-pie-pagina {
+			flex: 1;
+			min-width: 200px;
+			text-align: center;
+			flex-direction: column;
+		}
+
+		#pie-pagina .columna-pie-pagina h4 {
+			padding-bottom: 16px;
+			font-size: 1.2em;
+			text-transform: uppercase;
+			letter-spacing: 6px;
+			font-weight: lighter;
+		}
+
+		#pie-pagina .columna-pie-pagina a {
+			color: white;
+			text-decoration: none;
+			margin-bottom: 8px;
+			cursor: pointer;
+			transition: color 0.3s ease;
+		}
+
+
+		#pie-pagina .columna-enlaces a {
+			font-size: 2em;
+			margin: 0 8px;
+		}
+
+		#pie-pagina .columna-pie-pagina a:hover {
+			color: #2b937d;
+		}
+
+		#pie-pagina .columna-pie-pagina p {
+			line-height: 1.8;
+		}
+
+		/* RESPONSIVE */
+		@media (min-width: 768px) {
+			#cabecera h1 {
+				font-size: 4em;
+			}
+
+			#menu-principal .contenedor-menu {
+				flex-direction: row;
+			}
+
+			#seccion-opiniones .fila-opiniones {
+				flex-direction: row;
+				justify-content: center;
+			}
+
+			.opinion {
+				flex: 1;
+				min-width: 250px;
+				max-width: 50%;
+				text-align: center;
+
+			}
+
+			#pie-pagina .contenedor-pie-pagina {
+				flex-direction: row;
+			}
+
+		}
+
+		@media (min-width: 1200px) {
+			#seccion-quienes-somos .contenedor-quienes-somos {
+				max-width: 80%;
+				margin: 0 auto;
+			}
+
+			#seccion-quienes-somos .fila {
+				flex-direction: row;
+			}
+
+			.opinion {
+				flex: 1;
+				min-width: 250px;
+				max-width: 33%;
+				text-align: center;
+
+			}
+
+			#seccion-opiniones .contenedor-seccion-opiniones {
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			#pie-pagina .contenedor-pie-pagina {
+				width: 80%;
+				margin: 0 auto;
+			}
+
+		}
+	</style>
+</head>
+<body>
+	<!-- CABECERA / HERO -->
+	<header id="cabecera">
+		<h1>hecco</h1>
+		<p class="subtitulo">Tu tienda online de decoración en madera</p>
+	</header>
+
+	<!-- MENÚ -->
+	<nav id="menu-principal">
+		<nav class="contenedor-menu">
+			<a href="#">Inicio</a>
+			<a href="#">Quienes somos</a>
+			<a href="#">Dónde estamos</a>
+			<a href="#">Nuestra tienda</a>
+			<a href="#">Contacto</a>
+		</nav>
+	</nav>
+
+	<!-- SECCIÓN QUIENES SOMOS -->
+	<section id="seccion-quienes-somos">
+		<div class="contenedor-quienes-somos">
+			<h2 class="titulo-seccion">Quienes somos</h2>
+			<div class="fila">
+				<div class="columna-imagen">
+					<img alt="Decoración en madera Hecco"
+					     class="about__img"
+					     src="assets/images/figura-de-pato-en-madera.jpg" />
+				</div>
+				<div class="columna-texto">
+					<h3>Un equipo joven y preparado para el futuro</h3>
+					<p> Somos hecco, especialistas en diseño y fabricación de complementos de decoración en madera.
+					    Elaboramos nuestros productos de forma artesanal, lo que hace que cada una de nuestras piezas
+					    sea única.</p>
+
+					<p>Todos nuestros productos están realizados con orgullo en Campo de Criptana, corazón de la
+					   Mancha, en la zona centro de España. El mejor país del mundo.</p>
+
+					<p>Amamos lo que hacemos y por eso nos gusta trabajar con las mejores maderas, para ofrecer
+					   espacios singulares, donde disfrutamos creando una ambientación en madera única. Especializados
+					   en diseños personalizados en madera, nuestro reto es sorprender al cliente. </p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SECCIÓN OPINIONES -->
+	<section id="seccion-opiniones">
+		<div class="contenedor-seccion-opiniones">
+			<h2 class="titulo-seccion">Opiniones de nuestros clientes</h2>
+			<div class="fila-opiniones">
+				<div class="opinion">
+					<div class="imagen-redonda">
+						<img alt="" src="assets/images/Elena.webp">
+					</div>
+					<p>“La calidad de la madera es increíble y el acabado está cuidado al detalle. Un producto hecho con
+					   mimo.”</p>
+				</div>
+				<div class="opinion">
+					<div class="imagen-redonda">
+						<img alt="Cliente 2" src="assets/images/Juan.webp">
+					</div>
+					<p>“Compré un regalo y fue un acierto total. Diseño precioso, envío rápido y muy bien embalado.”</p>
+				</div>
+				<div class="opinion">
+					<div class="imagen-redonda">
+						<img alt="Cliente 3" src="assets/images/Maria.webp">
+					</div>
+					<p>“Compré un regalo y fue un acierto total. Diseño precioso, envío rápido y muy bien embalado.”</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer id="pie-pagina">
+		<div class="contenedor-pie-pagina">
+			<div class="columna-pie-pagina columna-enlaces">
+				<h4>· Enlaces ·</h4>
+				<a href="#">FB</a>
+				<a href="#">TW</a>
+				<a href="#">IN</a>
+			</div>
+			<div class="columna-pie-pagina columna-direccion">
+				<h4>· Dirección ·</h4>
+				<p>Calle Uruguay,1</p>
+				<p>Campo de Criptana</p>
+			</div>
+			<div class="columna-pie-pagina columna-email">
+				<h4>· Email ·</h4>
+				<a href="mailto:info@hecco.es">info@hecco.es</a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
