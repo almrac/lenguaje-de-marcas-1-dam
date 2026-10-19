@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>CSS en tablas</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			margin: 0;
+		}
+
+		h2 {
+			margin: 0;
+		}
+
+		header {
+			background-image: url(assets/images/molinos-viento-alcazar-de-san-juan-2.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			height: 300px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		section#sec01 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100px;
+			background-color: antiquewhite;
+		}
+
+		section#sec02 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 300px;
+			background-color: lightblue;
+		}
+
+		img {
+			width: 200px;
+			height: 200px;
+			border-radius: 100px;
+			object-fit: cover;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div style="text-align: center; color: purple;">
+			<h1>Visite La Mancha</h1>
+			<h2>Tierra de Quijotes</h2>
+		</div>
+	</header>
+	<section id="sec01">
+		<p style="font-style: italic">Una experiencia inolvidable</p>
+	</section>
+	<section id="sec02">
+		<img alt="" src="assets/images/02.jpg">
+	</section>
+
+</body>
+</html>

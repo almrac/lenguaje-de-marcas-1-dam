@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ágora Estudio</title>
+	<style>
+		* {
+			margin: 0;
+			box-sizing: border-box;
+			font-family: 'Arial', 'Helvetica', sans-serif;
+		}
+		p{
+			margin-bottom: 10px;
+		}
+		nav {
+			background-color: brown;
+			color: #fff;
+			padding: 10px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		nav a {
+			color: #fff;
+			text-decoration: none;
+		}
+		nav a:hover{
+			color: yellow;
+		}
+		header {
+			background-image: url(images/anteproyectos-arquitectonicos.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 300px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#caja-central {
+			text-align: center;
+		}
+		header h1 {
+			color: yellow;
+			text-shadow: 3px 3px 5px black;
+			font-size: 3em;
+		}
+		section#quienes-somos {
+			padding: 20px;
+		}
+		#contenedor-quienes {
+			display: flex;
+		}
+		#contenedor-quienes #izqu{
+			width: 50%;
+		}
+		#contenedor-quienes #der{
+			width: 50%;
+			text-align: center;
+		}
+		#contenedor-quienes #der img{
+			width: 80%;
+		}
+		.titulo {
+			color: brown;
+			text-align: center;
+		}
+		#obras{
+			background-color: antiquewhite;
+			padding: 20px;
+		}
+		#contenedor-obras{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		#contenedor-obras div{
+			width: 25%;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.obra{
+			width: 30%;
+			text-align: center;
+
+		}
+		.obra img{
+			width: 90%;
+		}
+		footer{
+			background-color:grey;
+			color: white;
+			padding: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		footer #caja-superior{
+			width: 100%;
+			text-align: center;
+			border-bottom: 2px solid white;
+			padding: 10px;
+
+		}
+
+
+		footer .caja-inferior{
+			width: 30%;
+			padding: 10px;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="#">Inicio</a>
+		<a href="#">Quienes somos</a>
+		<a href="#">Obras</a>
+		<a href="#">Contacto</a>
+	</nav>
+	<header>
+		<div id="caja-central">
+			<h1>Ágora</h1>
+			<h2>Estudio de arquitectura</h2>
+		</div>
+	</header>
+	<section id="quienes-somos">
+		<h1 class="titulo">
+			Quienes somos
+		</h1>
+		<div id="contenedor-quienes">
+			<div id="izqu">
+				<h1>Un equipo multidisciplinar y profesional</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi debitis eius ipsa minima quasi
+				   quibusdam repellendus sed vero voluptatibus? Ducimus est et excepturi expedita fugit labore, molestias qui
+				   soluta?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi debitis eius ipsa minima quasi
+				   quibusdam repellendus sed vero voluptatibus? Ducimus est et excepturi expedita fugit labore, molestias qui
+				   soluta? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi debitis eius ipsa minima quasi
+				   quibusdam repellendus sed vero voluptatibus? Ducimus est et excepturi expedita fugit labore, molestias qui
+				   soluta?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi debitis eius ipsa minima quasi
+				   quibusdam repellendus sed vero voluptatibus? Ducimus est et excepturi expedita fugit labore, molestias qui
+				   soluta?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi debitis eius ipsa minima quasi
+				   quibusdam repellendus sed vero voluptatibus? Ducimus est et excepturi expedita fugit labore, molestias qui
+				   soluta?</p>
+
+			</div>
+			<div id="der">
+				<img src="images/aquitecta.jpg" alt="Quienes somos">
+			</div>
+		</div>
+
+	</section>
+	<section id="obras">
+		<h1 class="titulo">
+			 Obras
+		</h1>
+		<div id="contenedor-obras">
+			<div class="obra">
+				<img src="images/maxresdefault.jpg" alt="">
+				<p>Sevilla</p>
+			</div>
+			<div class="obra">
+				<img src="images/maxresdefault.jpg" alt="">
+				<p>Madrid</p>
+			</div>
+			<div class="obra">
+				<img src="images/maxresdefault.jpg" alt="">
+				<p>Barcelona</p>
+			</div>
+			<div class="obra">
+				<img src="images/maxresdefault.jpg" alt="">
+				<p>Asturias</p>
+			</div>
+			<div class="obra">
+				<img src="images/maxresdefault.jpg" alt="">
+				<p>Cádiz</p>
+			</div>
+			<div class="obra">
+				<img src="images/maxresdefault.jpg" alt="">
+				<p>Valencia</p>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<p id="caja-superior">Contacte con nosotros. Trabajamos los 365 días del año</p>
+		<div class="caja-inferior">
+			<h2>Enlaces</h2>
+			<a href="#">Facebook</a>
+			<a href="#">Twitter</a>
+			<a href="#">Instagram</a>
+		</div>
+		<div class="caja-inferior">
+			<h2>Estamos en</h2>
+			<p>Avda. de los Institutos</p>
+			<p>13600 Alcázar de San Juan</p>
+		</div>
+		<div class="caja-inferior">
+			<h2>Email</h2>
+			<p>agora@gmail.com</p>
+
+
+		</div>
+
+	</footer>
+
+</body>
+</html>

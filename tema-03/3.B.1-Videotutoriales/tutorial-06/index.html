@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Propiedad Display: inline, block, none y inline-block</title>
+
+	<style>
+		#cabecera {
+			background-color: antiquewhite;
+			border-bottom: 10px solid blue;
+			padding: 30px;
+			position: sticky;
+			top: 0;
+		}
+
+		#menu {
+			background-color: yellow;
+			padding: 0;
+			margin: 0;
+		}
+
+		#enlace {
+			display: block;
+		}
+
+		#imagen {
+			display: block;
+			max-width: 300px;
+			height: auto;
+		}
+
+		#menu ul {
+			margin: 0;
+		}
+
+		#menu li {
+			display: inline-block;
+			width: 32%;
+			box-sizing: border-box;
+			text-align: center;
+			text-decoration: none;
+			padding: 20px;
+			background-color: blue;
+
+		}
+
+		#menu a {
+			color: white;
+			text-decoration: none;
+		}
+
+		body {
+			margin: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="cabecera">
+		<h1>Distribuciones Pérez S.L.</h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="#">Quienes somos</a></li>
+			<li><a href="#">Qué hacemos</a></li>
+			<li><a href="#">Donde estamos</a></li>
+		</ul>
+	</div>
+	<h2>Quienes somos</h2>
+	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#" id="enlace">Visite nuestra página</a> Nam
+	    luctus bibendum risus, id posuere risus. Duis eu
+	    semper nisi. Proin mattis hendrerit ullamcorper. <img id="imagen"
+	                                                          src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Windmills_Alcazar_San_Juan_2024.jpg">
+	    Vivamus interdum dolor ac ipsum venenatis, in eleifend lectus
+	    faucibus. Ut tellus enim, facilisis sed blandit tristique, rhoncus in ipsum. Integer euismod nisl urna, sed
+	    ultricies justo malesuada quis. </p>
+</body>
+</html>

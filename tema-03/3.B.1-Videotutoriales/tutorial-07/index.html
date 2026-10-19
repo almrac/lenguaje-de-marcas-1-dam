@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Etiquetas seḿanticas HTML para maquetación</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+		}
+
+		header {
+			background-color: lightblue;
+			height: 150px;
+		}
+
+		nav {
+			text-align: right;
+			background-color: red;
+			color: yellow;
+		}
+
+		nav li {
+			display: inline-block;
+			padding: 10px;
+		}
+
+		main {
+			background-color: pink;
+			height: 400px;
+		}
+
+		section {
+			background-color: lightgreen;
+			width: 60%;
+			float: left;
+			height: 100%;
+		}
+
+		article {
+			background-color: antiquewhite;
+			height: 50%;
+		}
+
+		aside {
+			width: 40%;
+			float: left;
+			background-color: lightgrey;
+			height: 100%;
+		}
+
+		footer {
+			background-color: grey;
+			height: 100px;
+			text-align: center;
+		}
+
+		nav a {
+			text-decoration: none;
+			color: yellow;
+		}
+
+		nav a:hover {
+			color: blue;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Distribuciones Pérez</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#">Quienes somos</a></li>
+			<li><a href="#">Tienda</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section id="novedades">
+			<article>
+				<h2>Nuevos taladros BOSCH</h2>
+				<p>Han llegado unos estupendos taladros más potentes y económicos</p>
+			</article>
+			<article>
+				<h2>Rebajas en mobiliario</h2>
+				<p>ESte mes obtenga un 20% de descuento con su carnet de socio</p>
+			</article>
+
+		</section>
+		<aside>
+			<p>Visite nuestra nueva tienda en Herencia</p>
+		</aside>
+		<footer>
+			<p>(c)Distribuciones Pérez</p>
+		</footer>
+	</main>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a60f4b26-1e8d-4c17-a2cf-460d9cd540ba" name="Changes" comment="[UPD] Aplicación práctica de flexbox. Estudio de Arquitectura ( nav, header, dos bloques)">
+      <change afterPath="$PROJECT_DIR$/tutorial-014/images/anteproyectos-arquitectonicos.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial-014/images/aquitecta.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial-014/images/maxresdefault.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial-014/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial-014/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="28" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;almrac&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/almrac/3.B.1-Videotutoriales.git&quot;,
+    &quot;accountId&quot;: &quot;ef92d140-9f31-4c82-b092-3b4f6f914739&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="36JJEibTt9WjMNS3BonH58ENupk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/mnt/proyectos/DAM/LENGUAJE DE MARCAS/UT3 - CSSII/3.B.1-Videotutoriales/tutorial-014/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tutorial-014/images" />
+      <recent name="$PROJECT_DIR$/tutorial-014" />
+      <recent name="$PROJECT_DIR$/tutorial-013/images" />
+      <recent name="$PROJECT_DIR$/tutorial-012" />
+      <recent name="$PROJECT_DIR$/tutorial-011" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PS-253.29346.151" />
+        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.29346.151" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a60f4b26-1e8d-4c17-a2cf-460d9cd540ba" name="Changes" comment="" />
+      <created>1764718631021</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764718631021</updated>
+      <workItem from="1764718632411" duration="1375000" />
+      <workItem from="1764806340820" duration="2080000" />
+      <workItem from="1764963995065" duration="8346000" />
+      <workItem from="1765409725506" duration="65000" />
+      <workItem from="1765409796892" duration="40000" />
+      <workItem from="1765409842670" duration="3162000" />
+      <workItem from="1765480567154" duration="3434000" />
+      <workItem from="1765583313399" duration="1962000" />
+      <workItem from="1765585284235" duration="115000" />
+      <workItem from="1767734542484" duration="7245000" />
+      <workItem from="1767913148647" duration="8323000" />
+    </task>
+    <task id="LOCAL-00001" summary="[UPD] ADD tutorial 03">
+      <option name="closed" value="true" />
+      <created>1764807030205</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764807030205</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[UPD] ADD tutorial 04">
+      <option name="closed" value="true" />
+      <created>1764807397694</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764807397694</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[UPD] ADD tutorial 05">
+      <option name="closed" value="true" />
+      <created>1764808323764</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764808323764</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[UPD] ADD tutorial 06">
+      <option name="closed" value="true" />
+      <created>1764969772797</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764969772797</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[UPD] ADD tutorial 07">
+      <option name="closed" value="true" />
+      <created>1764971182788</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764971182788</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[UPD] ADD tutorial 08">
+      <option name="closed" value="true" />
+      <created>1764972782545</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764972782545</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[UPD] ADD tutorial 09">
+      <option name="closed" value="true" />
+      <created>1764973931162</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764973931162</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[UPD] ADD tutorial 010">
+      <option name="closed" value="true" />
+      <created>1764974389466</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764974389466</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[UPD] ADD tutorial 011">
+      <option name="closed" value="true" />
+      <created>1764979090718</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1764979090718</updated>
+    </task>
+    <task id="LOCAL-00010" summary="[UPD] update project">
+      <option name="closed" value="true" />
+      <created>1767742966923</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1767742966923</updated>
+    </task>
+    <task id="LOCAL-00011" summary="[UPD] update cabecera flexbox">
+      <option name="closed" value="true" />
+      <created>1767743691093</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1767743691093</updated>
+    </task>
+    <task id="LOCAL-00012" summary="[UPD] Aplicación práctica de flexbox.  (footer)">
+      <option name="closed" value="true" />
+      <created>1767914113591</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1767914113591</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[UPD] Aplicación práctica de flexbox.  (footer) - responsive">
+      <option name="closed" value="true" />
+      <created>1767914232250</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1767914232250</updated>
+    </task>
+    <task id="LOCAL-00014" summary="[UPD] Aplicación práctica de flexbox. Estudio de Arquitectura ( nav, header, dos bloques)">
+      <option name="closed" value="true" />
+      <created>1767918120048</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1767918120048</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="[UPD] ADD tutorial 03" />
+    <MESSAGE value="[UPD] ADD tutorial 04" />
+    <MESSAGE value="[UPD] ADD tutorial 05" />
+    <MESSAGE value="[UPD] ADD tutorial 06" />
+    <MESSAGE value="[UPD] ADD tutorial 07" />
+    <MESSAGE value="[UPD] ADD tutorial 08" />
+    <MESSAGE value="[UPD] ADD tutorial 09" />
+    <MESSAGE value="[UPD] ADD tutorial 010" />
+    <MESSAGE value="[UPD] ADD tutorial 011" />
+    <MESSAGE value="[UPD] update project" />
+    <MESSAGE value="[UPD] update cabecera flexbox" />
+    <MESSAGE value="[UPD] Aplicación práctica de flexbox.  (footer)" />
+    <MESSAGE value="[UPD] Aplicación práctica de flexbox.  (footer) - responsive" />
+    <MESSAGE value="[UPD] Aplicación práctica de flexbox. Estudio de Arquitectura ( nav, header, dos bloques)" />
+    <option name="LAST_COMMIT_MESSAGE" value="[UPD] Aplicación práctica de flexbox. Estudio de Arquitectura ( nav, header, dos bloques)" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

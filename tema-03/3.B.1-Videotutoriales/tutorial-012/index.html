@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bosco Business</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+		*{
+			margin: 0;
+			box-sizing: border-box;
+			font-family: "Oswald", sans-serif;
+		}
+		body{
+			font-family: "Oswald", sans-serif;
+		}
+		nav{
+			background-color: midnightblue;
+			color: white;
+			font-family: Arial, Helvetica, sans-serif;
+			padding: 10px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		@media (max-width: 768px){
+			nav{
+				flex-direction: column;
+
+			}
+		}
+		nav a{
+			color: white;
+			text-decoration: none;
+		}
+		nav a:hover{
+			color: red;
+			font-weight: bold;
+			text-shadow: 3px 3px 5px white
+		}
+		header{
+			background-image: url(images/business.jpg);
+			height: 400px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#titular{
+			text-align: center;
+		}
+		#titular h1{
+			color: white;
+			text-shadow: 3px 3px 5px black;
+			font-size:3em;
+		}
+		#titular h2{
+			color: orange;
+			text-shadow: 3px 3px 5px black;
+		}
+		section#nuestros-clientes{
+			text-align: center;
+			padding: 20px;
+		}
+		h2.titulo{
+			color: purple;
+			font-size: .9em;
+		}
+		section#nuestros-clientes img{
+			border-radius: 50%;
+		}
+		footer{
+			background-color: grey;
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="#">Quienes Somos</a>
+		<a href="#">Consultoría</a>
+		<a href="#">Diseño Web</a>
+		<a href="#">Donde Estamos</a>
+		<a href="#">Contacto</a>
+	</nav>
+	<header>
+		<div id="titular">
+			<h1>Bosco Business</h1>
+			<h2>Tu puerta al futuro</h2>
+		</div>
+	</header>
+	<section id="nuestros-clientes">
+		<h2 class="titulo">
+		Nuestros clientes
+		</h2>
+		<img src="images/chica.jpg" alt="">
+		<h4>Bosco Business es la solución para mi empresa</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at blanditiis consequatur, cumque deserunt
+		   dolore eius, et expedita fugiat, hic id in ipsam iste itaque maiores molestias mollitia nemo nulla odit
+		   perferendis placeat praesentium quae quaerat quia quisquam recusandae repellat sequi soluta sunt tenetur
+		   ullam ut veritatis vero! Adipisci animi cum cumque, dolore dolorem, et eum id minima mollitia nihil non
+		   officiis quam qui reiciendis tenetur velit, voluptate voluptatibus. Accusantium aperiam cumque cupiditate,
+		   deleniti deserunt distinctio dolor dolores doloribus earum facilis fuga fugiat illo labore laudantium minima
+		   nam, perspiciatis praesentium quam quo reiciendis rem sequi sit ullam vero voluptas voluptatibus?</p>
+	</section>
+	<footer>
+		<p>&copy;2026 Bosco Design, S.L.</p>
+	</footer>
+</body>
+</html>
