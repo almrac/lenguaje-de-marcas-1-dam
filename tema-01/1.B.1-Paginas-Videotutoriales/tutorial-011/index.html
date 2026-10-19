@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formularios II</title>
+</head>
+<body>
+	<h1>Tipos de Inputs</h1>
+
+	<form action="procesa.php" method="get">
+		<fieldset>
+			<legend>Datos personales</legend>
+
+			<p>
+				<label for="nom">Nombre</label>
+				<input type="text" name="nombre" id="nom" maxlength="6">
+			</p>
+
+			<p>
+				<label for="edad">Edad</label>
+				<input type="number" name="edad" id="edad" min="0" max="100">
+			</p>
+
+			<p>
+				<label for="hombre">Hombre:</label>
+				<input type="radio" id="hombre" name="genero" value="H" checked>
+
+				<label for="mujer">Mujer:</label>
+				<input type="radio" id="mujer" name="genero" value="M">
+			</p>
+
+			<p>
+				<label for="fumador">Fumador:</label>
+				<input type="checkbox" id="fumador" name="fuma">
+			</p>
+
+		</fieldset>
+
+		<p>
+			<label for="prov">Provincia:</label>
+			<select name="prov" id="prov">
+				<option value="ab">Albacete</option>
+				<option value="cr">Ciudad Real</option>
+				<option value="cu">Cuenca</option>
+				<option value="to" selected>Toledo</option>
+			</select>
+		</p>
+
+		<p>
+			<label for="obs">Observaciones:</label>
+			<textarea name="obs" id="obs" cols="30" rows="10">Escriba algo...</textarea>
+		</p>
+
+		<p>
+			<label for="color">Color:</label>
+			<input type="color" name="color" id="color">
+		</p>
+
+		<p>
+			<label for="fecha-nac">Fecha de nacimiento:</label>
+			<input type="date" name="fecha-nac" id="fecha-nac">
+		</p>
+
+		<!-- Botones de envío y reset -->
+		<p>
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Reiniciar formulario">
+		</p>
+
+	</form>
+</body>
+</html>
