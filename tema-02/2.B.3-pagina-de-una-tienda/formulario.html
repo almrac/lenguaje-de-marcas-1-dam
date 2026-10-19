@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Formulario para Bricotodo</title>
+	<link href="estilos.css" rel="stylesheet">
+</head>
+<body class="formulario-bg">
+
+	<h1 class="form-h1">Formulario de Información</h1>
+
+	<form action="formulario.php" method="POST">
+		<fieldset>
+			<legend>Sus Datos</legend>
+
+			<p>
+				<label for="nombre">Nombre y apellidos:</label>
+				<input id="nombre" maxlength="50" name="nombre" type="text">
+			</p>
+
+			<p>
+				<label for="contra">Contraseña:</label>
+				<input id="contra" maxlength="8" name="contra" type="password">
+			</p>
+
+			<p>
+				<label for="usuario">Usuario:</label>
+				<input disabled id="usuario" type="text" value="anónimo">
+			</p>
+
+			<p>Nivel:</p>
+			<p>
+				<input id="nivel-pro" name="nivel" type="radio" value="profesional">
+				<label for="nivel-pro">Profesional</label>
+			</p>
+			<p>
+				<input checked id="nivel-av" name="nivel" type="radio" value="avanzado">
+				<label for="nivel-av">Avanzado</label>
+			</p>
+
+			<p>
+				<input id="nivel-pri" name="nivel" type="radio" value="principiante">
+				<label for="nivel-pri">Principiante</label>
+			</p>
+		</fieldset>
+		<p>
+			<label for="nacionalidad">Nacionalidad:</label>
+			<select id="nacionalidad" name="nacionalidad">
+				<option value="ES">España</option>
+			</select>
+		</p>
+
+		<p>
+			<label for="desc">Descripción:</label>
+			<textarea id="desc" name="desc"></textarea>
+		</p>
+
+		<p>
+			<input checked id="info" name="info" type="checkbox">
+			<label for="info">Deseo recibir información sobre novedades y ofertas</label>
+		</p>
+
+		<p>
+			<input id="legal" name="legal" type="checkbox">
+			<label for="legal">
+				Declaro haber leído y aceptar las condiciones generales del programa y normativa de protección de
+				datos
+			</label>
+		</p>
+
+		<p>
+			<label for="archivo">Adjuntar foto:</label>
+			<input id="archivo" name="archivo" type="file">
+		</p>
+
+		<button type="submit">Enviar</button>
+		<button type="reset">Borrar</button>
+
+	</form>
+
+</body>
+</html>

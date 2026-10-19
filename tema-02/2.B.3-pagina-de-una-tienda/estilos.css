@@ -1,0 +1,103 @@
+/******************************************************/
+/* INDEX */
+/******************************************************/
+/* Fondo de la página index */
+.index-bg {
+    background-image: url("assets/images/cafe-gatuno.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Arial", sans-serif;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+/* Estilos del H1 */
+.index-h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    color: #D2691E;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Estilos del H2 */
+.index-h2 {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    color: #00008B;
+}
+
+/* Estilos del H3 */
+.index-h3 {
+    font-family: "Arial", sans-serif;
+    font-size: 25px;
+    color: #008B8B;
+}
+
+/* Párrafos y listas */
+p, li {
+    font-family: "Arial", sans-serif;
+}
+
+/* Enlaces */
+a:link {
+    color: #00008B;
+    transition: all 0.3s linear;
+}
+a:visited {
+    color: #808080;
+    transition: all 0.3s linear;
+}
+a:hover {
+    color: #FF0000;
+    font-weight: bold;
+    transition: all 0.3s linear;
+}
+a:active {
+    color: #008000;
+    transition: all 0.3s linear;
+}
+
+/* Tabla */
+table {
+    width: 33%;
+    margin: auto;
+    background-color: #FAEBD7;
+    border: 2px solid #A52A2A;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 2px solid #A52A2A;
+    padding: 5px;
+}
+
+
+/******************************************************/
+/* FORMULARIO*/
+/******************************************************/
+/* fondo del formulario */
+.formulario-bg {
+    background-color: #FAEBD7;
+}
+
+/* Estilo del H1 del formulario */
+.form-h1 {
+    font-size: 25px;
+    color: #A52A2A;
+    font-family: "Arial", sans-serif;
+    text-align: left;
+}
+
+/* Labels */
+label {
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Input/textarea */
+input, select {
+    margin-bottom: 10px;
+}
