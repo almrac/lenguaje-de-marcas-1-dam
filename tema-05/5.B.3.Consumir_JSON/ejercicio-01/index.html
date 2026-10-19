@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>01. JSON cliente</title>
+	<style>
+		/* Estilos generales de la página. */
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
+
+		/* Tarjeta principal que contiene todo el ejercicio. */
+		main {
+			width: 100%;
+			max-width: 70rem;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		/* Estilos básicos de encabezados y párrafos. */
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+
+		/* Caja destacada donde se explica el enunciado. */
+		.intro {
+			margin-top: 1rem;
+			padding: 1.25rem 1.5rem;
+			border-radius: 0.9rem;
+			background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+			border: 1px solid #bfdbfe;
+		}
+
+		/* Etiqueta visual pequeña para el título del enunciado. */
+		.intro-etiqueta {
+			display: inline-block;
+			margin-bottom: 0.65rem;
+			padding: 0.35rem 0.7rem;
+			border-radius: 999px;
+			background: #dbeafe;
+			color: #1d4ed8;
+			font-size: 0.8rem;
+			font-weight: 700;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+		}
+
+		/* Texto del bloque introductorio. */
+		.intro p {
+			margin: 0;
+			font-size: 1rem;
+			color: #334155;
+		}
+
+		.intro strong {
+			color: #0f172a;
+		}
+
+		/* Contenedor de la parte central del ejercicio. */
+		.paneles {
+			margin-top: 1rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+
+		/* Caja donde explicamos el funcionamiento del ejemplo. */
+		.bloque-conversion {
+			margin-top: 1rem;
+			background: #ffffff;
+			border: 1px solid #cbd5e1;
+			border-radius: 0.75rem;
+			padding: 0.75rem;
+		}
+
+		/* Título del bloque central. */
+		.bloque-conversion h2 {
+			margin: 0 0 0.5rem 0;
+			font-size: 1rem;
+		}
+
+		/* Lista con los apartados del JSON que se van a mostrar. */
+		.bloque-conversion ul {
+			margin: 0.75rem 0 0 1.25rem;
+			padding: 0;
+			color: #334155;
+			line-height: 1.6;
+		}
+
+		/* Botón que inicia la lectura del archivo JSON. */
+		.boton-alertas {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.8rem 1.15rem;
+			border: 0;
+			border-radius: 0.7rem;
+			background: #1d4ed8;
+			color: #ffffff;
+			font-size: 1rem;
+			font-weight: 700;
+			cursor: pointer;
+			transition: background 0.2s ease;
+		}
+
+		/* Cambio de color del botón al pasar el ratón. */
+		.boton-alertas:hover {
+			background: #1e40af;
+		}
+
+		/* Caja que informa del estado actual del ejercicio. */
+		.estado {
+			margin-top: 1rem;
+			padding: 0.85rem 1rem;
+			border-radius: 0.7rem;
+			background: #eff6ff;
+			border: 1px solid #bfdbfe;
+			color: #1e3a8a;
+		}
+
+		/* Enlace para volver a la página principal. */
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			margin-left: 0.75rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+
+		/* Clase usada cuando ocurre un error al cargar el JSON. */
+		.error {
+			color: #b91c1c;
+			font-weight: 600;
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<!-- Título principal del ejercicio. -->
+		<h1>01. JSON cliente</h1>
+
+		<!-- Bloque que resume el objetivo del ejercicio. -->
+		<div class="intro">
+			<span class="intro-etiqueta">Enunciado</span>
+			<p>Consumir un archivo JSON de un <strong>cliente</strong> con <strong>fetch</strong> y mostrar sus valores mediante <strong>alert</strong>, incluyendo un objeto <strong>direccion</strong> y un array de <strong>aficiones</strong>.</p>
+		</div>
+
+		<!-- Zona principal del contenido explicativo. -->
+		<div class="paneles">
+			<div class="bloque-conversion">
+				<!-- Explicación breve del comportamiento del ejemplo. -->
+				<h2>Que hace este ejercicio</h2>
+				<p>Al pulsar el botón, JavaScript leerá el archivo <strong>miCliente.json</strong> con <strong>fetch</strong> y mostrará sus datos mediante varias ventanas <strong>alert</strong>.</p>
+
+				<!-- Lista de bloques de información que se mostrarán. -->
+				<ul>
+					<li>Datos básicos del cliente</li>
+					<li>Datos del objeto direccion</li>
+					<li>Valores del array aficiones</li>
+				</ul>
+
+				<!-- Botón que activa la lectura del JSON y los alert. -->
+				<button class="boton-alertas" id="mostrarDatos" type="button">Mostrar datos del cliente</button>
+
+				<!-- Texto que va informando si el archivo se está cargando o si hubo error. -->
+				<p class="estado" id="estado">Pulsa el botón para cargar el JSON y ver los alert.</p>
+			</div>
+		</div>
+
+		<!-- Enlace de vuelta al índice general de ejercicios. -->
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+
+	<script>
+		// Obtenemos los elementos del HTML que vamos a modificar desde JavaScript.
+		const botonMostrarDatos = document.getElementById("mostrarDatos");
+		const estado = document.getElementById("estado");
+
+		/*
+			Cuando el usuario pulsa el botón, se ejecuta esta función.
+			Aquí se carga el JSON y se muestran sus datos mediante alert.
+		*/
+		botonMostrarDatos.addEventListener("click", () => {
+			// Mensaje inicial mientras se intenta leer el archivo.
+			estado.textContent = "Cargando datos del archivo JSON...";
+
+			// fetch() solicita el archivo JSON de forma asíncrona.
+			fetch("miCliente.json")
+				.then(response => {
+					// Si la respuesta no es válida, generamos un error.
+					if (!response.ok) {
+						throw new Error("No se pudo cargar el archivo JSON");
+					}
+
+					// Convertimos la respuesta del servidor a objeto JavaScript.
+					return response.json();
+				})
+				.then(data => {
+					// Si el JSON se ha cargado bien, actualizamos el mensaje.
+					estado.textContent = "Datos cargados correctamente. Se están mostrando los alert.";
+
+					// Mostramos por alert los datos principales del cliente.
+					alert("ID: " + data.id);
+					alert("Nombre: " + data.nombre);
+					alert("Apellidos: " + data.apellidos);
+					alert("Email: " + data.email);
+					alert("Telefono: " + data.telefono);
+					alert("Activo: " + data.activo);
+
+					// Mostramos por alert los datos del objeto direccion.
+					alert("Calle: " + data.direccion.calle);
+					alert("Numero: " + data.direccion.numero);
+					alert("Piso: " + data.direccion.piso);
+					alert("Codigo postal: " + data.direccion.codigoPostal);
+					alert("Poblacion: " + data.direccion.poblacion);
+					alert("Provincia: " + data.direccion.provincia);
+					alert("Pais: " + data.direccion.pais);
+
+					// Recorremos el array aficiones y mostramos un alert por cada elemento.
+					for (let i = 0; i < data.aficiones.length; i++) {
+						alert("Aficion " + (i + 1) + ": " + data.aficiones[i]);
+					}
+				})
+				.catch(error => {
+					// Si algo falla, mostramos el error en el cuadro de estado.
+					estado.textContent = "Error al cargar el archivo JSON: " + error.message;
+					estado.classList.add("error");
+				});
+		});
+	</script>
+</body>
+</html>

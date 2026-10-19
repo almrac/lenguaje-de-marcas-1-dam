@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 460">
+  <rect width="360" height="460" fill="#dbeafe"/>
+  <rect x="98" y="32" width="164" height="396" fill="#1e3a8a"/>
+  <rect x="110" y="50" width="140" height="360" fill="#60a5fa"/>
+  <rect x="145" y="62" width="70" height="16" fill="#bfdbfe"/>
+  <circle cx="180" cy="202" r="74" fill="#93c5fd" opacity="0.65"/>
+  <circle cx="180" cy="202" r="48" fill="#dbeafe" opacity="0.75"/>
+  <text x="180" y="360" font-family="Arial, Helvetica, sans-serif" font-size="24" text-anchor="middle" fill="#eff6ff">iPhone 15</text>
+</svg>
