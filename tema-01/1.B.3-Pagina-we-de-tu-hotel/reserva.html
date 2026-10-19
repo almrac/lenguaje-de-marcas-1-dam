@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Haga su reserva</title>
+	<style>
+		body {
+			background-color: #f0f8ff; /* color de fondo de la página */
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: blue; /* Punto 2: Un h1 que ponga  “Hotel ……”. El color de la letra es blue */
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Punto 1: Una cabecera H1 “Haga su reserva” -->
+	<h1>Haga su reserva</h1>
+
+	<!-- Punto 2: Un formulario ” -->
+	<!-- Punto 13: Los datos se enviarían a un archivo llamado “procesareserva.php” por el método “GET” ” -->
+	<form action="procesareserva.php" method="get">
+
+		<!-- Punto 10: Agrupa los campos nombre, apellidos y dni en un fieldset con la leyenda “Datos Personales”
+			y el resto de campos en un fieldset con la leyenda “Datos de su estancia” -->
+		<fieldset>
+			<legend>Datos personales</legend>
+
+			<!-- Punto 3: Un input para introducir el nombre y otro para los apellidos.
+				Los dos requeridos y con una longitud máxima de 100 caracteres.  El nombre con autofocus -->
+			<p>
+				<label for="nombre">Nombre:</label>
+				<input
+						autofocus
+						id="nombre"
+						maxlength="100"
+						name="nombre"
+						required
+						type="text"
+				>
+			</p>
+
+			<!-- Punto 3: Input apellidos -->
+			<p>
+				<label for="apellidos">Apellidos:</label>
+				<input
+						id="apellidos"
+						maxlength="100"
+						name="apellidos"
+						required
+						type="text"
+				>
+			</p>
+
+			<!-- Punto 4: Un input de longitud máxima 10 caracteres para introducir el DNI.
+				Es requerido y tiene un placeholder que pone “DNI con letra” -->
+			<p>
+				<label for="dni">DNI:</label>
+				<input
+						id="dni"
+						maxlength="10"
+						name="dni"
+						placeholder="DNI con letra"
+						required
+						type="text"
+				>
+			</p>
+		</fieldset>
+
+		<!-- Punto 10: Agrupa los campos nombre, apellidos y dni en un fieldset con la leyenda “Datos Personales”
+					y el resto de campos en un fieldset con la leyenda “Datos de su estancia” -->
+			<fieldset>
+				<legend>Datos de su estancia</legend>
+
+				<!-- Punto 5: Tres botones de radio con los valores Individual, Doble y Triple.
+					El nombre del campo al que se asignan será “Habitación”  -->
+				<p>
+					<span>Tipo de habitación:</span><br>
+
+					<input
+							checked
+							id="hab-individual"
+							name="Habitación"
+							type="radio"
+							value="Individual"
+					>
+					<label for="hab-individual">Individual</label>
+
+					<br>
+
+					<input
+							id="hab-doble"
+							name="Habitación"
+							type="radio"
+							value="Doble"
+					>
+					<label for="hab-doble">Doble</label>
+
+					<br>
+
+					<input
+							id="hab-triple"
+							name="Habitación"
+							type="radio"
+							value="Triple"
+					>
+					<label for="hab-triple">Triple</label>
+				</p>
+
+				<!-- Punto 6: Una lista desplegables ( Número de personas ) con los valores: 1,2 y 3 -->
+				<p>
+					<label for="num-personas">Número de personas:</label>
+					<select id="num-personas" name="num_personas">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+				</p>
+
+				<!-- Punto 7: Un “Checkbox” con el texto, “Llevo mascotas” -->
+				<p>
+					<input
+							id="mascotas"
+							name="mascotas"
+							type="checkbox"
+					>
+					<label for="mascotas">Llevo mascotas</label>
+				</p>
+
+				<!-- Punto 8: Un input de tipo “date” con el texto fecha de llegada -->
+				<p>
+					<label for="fecha-llegada">Fecha de llegada:</label>
+					<input
+							id="fecha-llegada"
+							name="fecha_llegada"
+							type="date"
+					>
+				</p>
+
+				<!-- Punto 9: Un input de tipo “time”  con el texto “Hora de llegada” -->
+				<p>
+					<label for="hora-llegada">Hora de llegada:</label>
+					<input
+							id="hora-llegada"
+							name="hora_llegada"
+							type="time"
+					>
+				</p>
+
+			</fieldset>
+
+			<!-- Punto 11: Un botón de enviar y otro de reiniciar  -->
+			<p>
+				<input type="submit" value="Enviar reserva">
+				<input type="reset" value="Reiniciar formulario">
+			</p>
+
+	</form>
+
+	<!-- Punto 12: Un enlace que ponga “Volver” y que lleve la página principal index.html -->
+	<p>
+		<a href="index.html">Volver</a>
+	</p>
+
+</body>
+</html>
