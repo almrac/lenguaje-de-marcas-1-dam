@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>2. Crear un XML</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+			color: #0f172a;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
+
+		main {
+			width: 100%;
+			max-width: 42rem;
+			padding: 2rem;
+			background: #ffffff;
+			border-radius: 1rem;
+			box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		p {
+			line-height: 1.5;
+		}
+		#display {
+			margin-top: 1rem;
+			padding: 1rem;
+			border-radius: 0.75rem;
+			background: #f8fafc;
+			border: 1px solid #cbd5e1;
+		}
+
+		#xml-contenido {
+			margin: 0;
+			white-space: pre-wrap;
+			font-family: Consolas, Monaco, 'Courier New', monospace;
+			font-size: 0.92rem;
+		}
+
+		button {
+			padding: 0.85rem 1.2rem;
+			border: none;
+			border-radius: 0.7rem;
+			background: #2563eb;
+			color: #ffffff;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background: #1d4ed8;
+		}
+
+		.volver {
+			display: inline-block;
+			margin-top: 1rem;
+			padding: 0.7rem 1rem;
+			border-radius: 0.7rem;
+			background: #e2e8f0;
+			color: #1e293b;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.volver:hover {
+			background: #cbd5e1;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>2. Crear un XML</h1>
+		<p>Aqui se muestra el contenido del archivo XML <code>lista-emails.xml</code>.</p>
+		<div id="display">
+			<pre id="xml-contenido">Cargando XML...</pre>
+		</div>
+
+		<a class="volver" href="../index.html">Volver al índice</a>
+	</main>
+
+	<script>
+		const contenedorXml = document.getElementById('xml-contenido');
+
+		async function mostrarXml() {
+			try {
+				const respuesta = await fetch('lista-emails.xml');
+				if (!respuesta.ok) {
+					contenedorXml.textContent = 'Error al cargar lista-emails.xml';
+					return;
+				}
+
+				contenedorXml.textContent = await respuesta.text();
+			} catch (error) {
+				contenedorXml.textContent = 'Error al cargar lista-emails.xml';
+				console.error(error);
+			}
+		}
+
+		mostrarXml();
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE pedido>
+<pedido>
+    <destinatario dni="12345678A">
+        <nombre>Alfredo Reino</nombre>
+        <apellido1>Reino</apellido1>
+        <apellido2>García</apellido2>
+    </destinatario>
+    <aticulo codigo="1234">bicileta</aticulo>
+    <direccion_entrega>
+        <calle>calle falsa</calle>
+        <numero>123</numero>
+        <piso>2</piso>
+        <puerta>A</puerta>
+    </direccion_entrega>
+    <fecha_entrega dia="15" mes="06" año="2024"/>
+</pedido>

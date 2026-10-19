@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista_emails>
+    <email id="1" fecha="2024-06-01">
+        <de>alfonso@correo.com</de>
+        <para>pepe@correo.es</para>
+        <para>maria@correo.es</para>
+        <para>juan@correo.es</para>
+        <cc>jefe@empresa.com</cc>
+        <bcc>director@empresa.com</bcc>
+        <asunto>Manden provisiones</asunto>
+        <cuerpo>Nos estamos quedando sin provisiones, manden más</cuerpo>
+</email>
+    <email id="2" feccha="2024-06-02">
+        <de>administracion@empresa.com</de>
+        <para>alfonso@correo.com</para>
+        <asunto>Provisiones recibidas</asunto>
+        <cuerpo>Confirmamos que las provisiones solicitadas en tu correo anterior han sido recibidas correctamente. Gracias.</cuerpo>
+    </email>
+</lista_emails>
