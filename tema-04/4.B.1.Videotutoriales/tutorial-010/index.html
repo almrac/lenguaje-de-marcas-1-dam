@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validación de formularios</title>
+	<style>
+		*{
+			font-family: Arial, Helvetica, sans-serif;
+			box-sizing: border-box;
+		}
+		#titulo{
+			text-align: center;
+		}
+		#aviso{
+			color: red;
+			text-align: center;
+		}
+		#capaformulario{
+			height: 300px;
+			background-color: grey;
+			border-radius: 15px;
+			width: 80%;
+			margin: auto;
+			padding: 20px;
+		}
+		label{
+			color: white;
+			display: inline-block;
+			width: 30%;
+		}
+		input{
+			max-width: 70%;
+			width: 100%;
+			height: 25px;
+			border: 1px solid white;
+			border-radius: 4px;
+			margin-bottom: 20px;
+		}
+	</style>
+	<script>
+		function validaFormulario(){
+			var aviso = document.getElementById("aviso");
+			aviso.innerHTML = "";
+			var nombre = document.getElementById("nombre");
+			if(nombre.value.length == 0){
+				aviso.innerHTML = "**El nombre no puede estar vacío**";
+				return false;
+			}
+			var fecha = document.getElementById("fecha");
+			if(fecha.value.length == 0){
+				aviso.innerHTML = "**Debe seleccionar una fecha**";
+				fecha.focus();
+				return false;
+			}
+			if(fecha.value < "2020-03-26"){
+				aviso.innerHTML = "**La fecha no puede se anterior al 26/03/2020**";
+				fecha.focus();
+				return false;
+			}
+			alert("Datos correctos. Proceso a enviar");
+			return true;
+
+		}
+	</script>
+</head>
+<body>
+	<h1 id="titulo">Formulario de inscripción</h1>
+
+	<div id="capaformulario">
+		<form action="procesa.php" onsubmit="return validaFormulario()">
+			<label for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre">
+			<br>
+			<label for="fecha">Fecha de inscripción:</label><input type="date" id="fecha" name="fecha">
+			<br>
+			<div style="text-align: center; margin-top: 20px;">
+				<input type="submit" value="Enviar Datos">
+			</div>
+
+		</form>
+	</div>
+
+	<h5 id="aviso"></h5>
+</body>
+</html>

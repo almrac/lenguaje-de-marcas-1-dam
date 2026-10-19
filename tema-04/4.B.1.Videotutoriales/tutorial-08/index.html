@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta charset="UTF-8">
+	<title>Selector Provincias</title>
+	<style type="text/css">
+		body{
+			display: flex;
+			flex-direction: column;
+			 align-items: center;
+			justify-content: center;
+			gap: 1.2rem;
+		}
+		img{
+			object-fit: cover;
+			object-position: center;
+			aspect-ratio: 1/1;
+			margin-top: 1.2rem;
+		}
+	</style>
+	<script type="text/javascript">
+		function cambiarImagen(){
+			var provincia = document.getElementById("provincia").value;
+			var imagen = document.getElementById("img");
+			imagen.style.visibility = "visible";
+			if(provincia === "cr"){
+				imagen.src = "images/ciudad-real.jpg";
+			} if(provincia === "ab"){
+				imagen.src = "images/Albacete.webp";
+			} if(provincia === "cu"){
+				imagen.src = "images/cuenca.jpg";
+			} if(provincia === "gu"){
+				imagen.src = "images/guadalajara.jpg";
+			} if(provincia === "to"){
+				imagen.src = "images/toledo.webp";
+
+			} if(provincia === "noseleccionado"){
+				imagen.src = "";
+				imagen.style.visibility = "hidden";
+			}
+		}
+	</script>
+</head>
+<body>
+<h1>Castilla-La Mancha</h1>
+	<form>
+		<label for="provincia">Provincia</label>
+		<select name="provincia" id="provincia" onchange="cambiarImagen()">
+			<option value="noseleccionado">Seleccione...</option>
+			<option value="ab">Albacete</option>
+			<option value="cr">Ciudad Real</option>
+			<option value="cu">Cuenca</option>
+			<option value="gu">Guadalajara</option>
+			<option value="to">Toledo</option>
+		</select>
+		<br>
+		<img style="visibility: hidden;" id="img" src="" alt="" width="400" height="400">
+	</form>
+</body>
+</html>

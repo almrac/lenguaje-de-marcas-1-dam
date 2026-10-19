@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta charset="UTF-8">
+	<title>Selector País</title>
+	<style type="text/css">
+		body{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 1.2rem;
+		}
+		#provincia{
+			visibility: hidden;
+		}
+	</style>
+	<script type="text/javascript">
+		function cambiarVisibilidad(){
+			var pais = document.getElementById("pais").value;
+			var provincia = document.getElementById("provincia");
+
+			if(pais === "es"){
+				provincia.style.visibility = "visible";
+			} else {
+				provincia.style.visibility = "hidden";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Castilla-La Mancha</h1>
+	<form>
+		<label for="pais">País</label>
+		<select name="pais" id="pais" onchange="cambiarVisibilidad()">
+			<option value="noseleccionado" selected>Seleccione...</option>
+			<option value="es">España</option>
+			<option value="fr">Fuera de España</option>
+		</select>
+		<select name="provincia" id="provincia" >
+			<option value="noseleccionado" selected>Elegir provincia</option>
+			<option value="ab">Albacete</option>
+			<option value="cr">Ciudad Real</option>
+			<option value="cu">Cuenca</option>
+			<option value="gu">Guadalajara</option>
+			<option value="to">Toledo</option>
+		</select>
+	</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Nota media</title>
+</head>
+<body>
+	<button onClick="notaMedia()">Nota media</button>
+<script>
+	function notaMedia() {
+		let numNotas = parseInt(prompt("Dime el número de notas"));
+		/*he añadido esto para que el número de notas introducidas no pueda ser 0*/
+		if (!Number.isInteger(numNotas) || numNotas <= 0) {
+			alert("Introduce un número válido de notas (entero mayor que 0).");
+			return;
+		}
+		let suma = 0 ;
+		let nota;
+		for(let i = 1; i <= numNotas; i++){
+			/*lo he puesto asi para que el usuario sepa en el número de nota que está introduciendo*/
+			nota = parseFloat(prompt("Dime la " + i + "ª nota"));
+			suma = suma + nota;
+		}
+		/*let nota1 = parseFloat(prompt("Dime la 1ª nota"));
+		let nota2 = parseFloat(prompt("Dime la 2ª nota"));
+		let nota3 = parseFloat(prompt("Dime la 3ª nota"));
+		let suma = nota1 + nota2 + nota3;*/
+		let media = suma / numNotas;
+		alert("La nota media es: " + media);
+	}
+</script>
+
+</body>
+</html>

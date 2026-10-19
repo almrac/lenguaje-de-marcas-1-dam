@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Métodos de las fechas ( Dates )</title>
+	<script>
+		function procesaFecha() {
+			var fechaStr = document.getElementById('fecha').value;
+			var fechaDate = new Date(fechaStr);
+			var diaMes = fechaDate.getDate();
+			var diaSemana = fechaDate.getDay();
+			var mes = fechaDate.getMonth();
+			var anio = fechaDate.getFullYear();
+			alert("día del mes: " + diaMes + " día de la semana: " + diaSemana + " del mes: " + mes + " del año: " + anio);
+			/*alert(fechaDate);*/
+
+		}
+	</script>
+</head>
+<body>
+<h1> Métodos para fechas</h1>
+	<label for="fecha">Fecha</label>
+	<input type="date" name="fecha" id="fecha"> <br>
+	<button onclick="procesaFecha()">Procesar fecha</button>
+</body>
+</html>

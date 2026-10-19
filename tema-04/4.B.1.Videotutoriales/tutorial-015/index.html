@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Repaso JavaScript</title>
+</head>
+<body>
+	<button onclick="acceso()">Pregunta edad</button>
+	<button onclick="suma()">Suma</button>
+	<button onclick="login()">Login</button>
+	<button onclick="calculaDoble()">Doble</button>
+	<button onclick="diceAlineacion()">Alineación</button>
+	<button onclick="sumaHasta()">Suma n primeros números</button>
+
+	<script>
+		/************************************************/
+		/*acceso(): alert y prompt, let, if             */
+		/************************************************/
+
+		function acceso(){
+			let edad=prompt("dime la edad");
+			if(edad.number<18){
+				alert("No puedes acceder");
+			}else{
+				alert("Bienvenid@ a mi página");
+			}
+		}
+
+		/************************************************/
+		/*suma(): vemos el operador + la función paseInt*/
+		/************************************************/
+
+		function suma(){
+			let x=prompt("Dime el valor de x");
+			let y=prompt("Dime el valor de y");
+			let suma=parseInt(x)+parseInt(y);
+			alert("La suma es " + suma);
+		}
+		/*******************************************************/
+		/*login(): operador de relación ==  op. Lógico && (and */
+		/*******************************************************/
+		function login(){
+			let usuario=prompt("Introduce el usuario");
+			let password=prompt("Introduce la contraseña");
+			if(usuario==="admin" && password==="1234"){
+				alert("Puede acceder a a la página");
+			}else{
+				alert("No puedes acceder");
+			}
+		}
+
+		/*******************************************************/
+		/*doble(): función con argumento y devolución de valores */
+		/*******************************************************/
+		function doble(n){
+			return 2*n;
+		}
+		function calculaDoble(){
+			let num=prompt("Dime un numero");
+			alert("El doble de " + num + "es " + doble(num));
+		}
+
+		/*******************************************************/
+		/*diceAlineacion(): Arrays                             */
+		/*******************************************************/
+		function diceAlineacion(){
+			let alineacion = ['Benzema', 'Bale', 'Marcelo', 'Sergio Ramos']
+			let posicion = prompt("Dime una posición");
+			alert("En la posición " + posicion + " juega " + alineacion[posicion]);
+		}
+
+		/*******************************************************/
+		/*sumarHasta(): Bucle for                              */
+		/*******************************************************/
+		function sumaHasta(){
+			let num=prompt("Dime el número que quieres sumar");
+			let suma=0;
+			for(let i=1; i<num;i++){
+				suma=suma+i;
+			}
+			alert("La suma de los " + num + "primeros números es " + suma);
+		}
+	</script>
+
+</body>
+</html>

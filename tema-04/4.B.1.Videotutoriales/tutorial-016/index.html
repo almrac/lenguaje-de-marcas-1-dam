@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Repaso JavaScript II</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 24px;
+			line-height: 1.4;
+		}
+
+		.panel {
+			background: #f7f7f7;
+			border: 1px solid #ddd;
+			border-radius: 8px;
+			padding: 16px;
+			margin-bottom: 16px;
+		}
+
+		.row {
+			margin-bottom: 10px;
+		}
+
+		.controls {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+		}
+
+		button {
+			padding: 8px 12px;
+			border: 1px solid #bbb;
+			border-radius: 6px;
+			background: #fff;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background: #f0f0f0;
+		}
+
+		input,
+		select {
+			padding: 6px;
+			border: 1px solid #bbb;
+			border-radius: 4px;
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin-top: 12px;
+			border-radius: 6px;
+		}
+
+		.importante {
+			color: #0d47a1;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<div class="panel">
+		<h1 id="titulo">Título</h1>
+		<h1 id="titulo2">Título</h1>
+		<p class="row"><label for="usuario">Usuario:</label> <input id="usuario" type="text" value="Pepe"></p>
+		<p class="row"><label for="idioma">Idioma: </label><select id="idioma" name="" onchange="cambiarIdioma()">
+			<option value="es">Español</option>
+			<option value="en">Inglés</option>
+		</select></p>
+
+		<div class="controls">
+			<button onclick="cambiaTitulo()">Cambia Titulo</button>
+			<button onclick="cambiaImagen()">Cambia Imagen</button>
+			<button onclick="cambiaValor()">Cambia Valor</button>
+			<button onclick="cambiaColor()">Cambia Color</button>
+			<button onclick="ocultaImagen()">Oculta imagen</button>
+			<button onclick="aplicaClase()">Aplica Clase</button>
+			<button onclick="nuevoHTML()">Nuevo Html</button>
+		</div>
+	</div>
+
+	<img id="imagen" src="https://upload.wikimedia.org/wikipedia/commons/1/13/Campo_de_Criptana_Molinos_de_Viento_1.jpg" alt="">
+
+	<script>
+		/** propiedad innerHTML **/
+		function cambiaTitulo() {
+			let titulo = document.getElementById('titulo');
+			titulo.innerHTML= "Título NUEVO";
+		}
+
+		/** aributros html: ej. src o value **/
+		function cambiaImagen() {
+			document.getElementById("imagen").src = "https://upload.wikimedia.org/wikipedia/commons/e/e6/006444_-_Campo_de_Criptana_%287576553560%29.jpg";
+		}
+		function cambiaValor() {
+			document.getElementById("usuario").value = "admin";
+		}
+		/**  prroiedades css**/
+		function cambiaColor() {
+			let titulo = document.getElementById("titulo");
+			titulo.style.color = "red";
+			titulo.style.backgroundColor = "yellow";
+			titulo.style.fontSize = "4em";
+			titulo.style.border = "2px solid red";
+		}
+
+		function ocultaImagen() {
+			document.getElementById("imagen").style.display = "none";
+		}
+		function aplicaClase() {
+			let titulo = document.getElementById("titulo2");
+			titulo.className= "importante";
+
+		}
+		function nuevoHTML() {
+			document.write("<h1>Nuevo HTML</h1>");
+		}
+		function cambiarIdioma() {
+			let miSelect=document.getElementById("idioma");
+			let titulo=document.getElementById("titulo");
+			if(miSelect.value=="en"){
+				titulo.innerHTML="New Title";
+			}else{
+				titulo.innerHTML= "Nuevo Título";
+			}
+		}
+	</script>
+</body>
+</html>
